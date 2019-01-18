@@ -90,3 +90,748 @@ con
 ----------------End of Script----------------
 
 17:41:35 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:15:52 INFO  : Disconnected from the channel tcfchan#1.
+18:15:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:55 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:15:55 INFO  : 'jtag frequency' command is executed.
+18:15:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:16:00 INFO  : FPGA configured successfully with bitstream "/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:16:01 INFO  : Context for processor 'microblaze_i0' is selected.
+18:16:01 INFO  : System reset is completed.
+18:16:04 INFO  : 'after 3000' command is executed.
+18:16:04 INFO  : Context for processor 'microblaze_i0' is selected.
+18:16:04 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:16:04 INFO  : Context for processor 'microblaze_i1' is selected.
+18:16:04 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:16:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0
+fpga -file /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:16:04 INFO  : Memory regions updated for context MicroBlaze #0
+18:16:04 INFO  : Memory regions updated for context MicroBlaze #1
+18:16:04 INFO  : Memory regions updated for context MicroBlaze #0
+18:16:04 INFO  : Context for processor 'microblaze_i0' is selected.
+18:16:04 INFO  : 'con' command is executed.
+18:16:04 INFO  : Context for processor 'microblaze_i1' is selected.
+18:16:04 INFO  : 'con' command is executed.
+18:16:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:16:04 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:16:50 INFO  : Disconnected from the channel tcfchan#2.
+18:16:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:16:54 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:16:54 INFO  : 'jtag frequency' command is executed.
+18:16:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:17:06 INFO  : FPGA configured successfully with bitstream "/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:17:06 INFO  : Context for processor 'microblaze_i0' is selected.
+18:17:06 INFO  : System reset is completed.
+18:17:09 INFO  : 'after 3000' command is executed.
+18:17:09 INFO  : Context for processor 'microblaze_i0' is selected.
+18:17:09 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:17:09 INFO  : Context for processor 'microblaze_i1' is selected.
+18:17:09 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:17:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0
+fpga -file /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:17:09 INFO  : Memory regions updated for context MicroBlaze #0
+18:17:09 INFO  : Memory regions updated for context MicroBlaze #1
+18:17:09 INFO  : Memory regions updated for context MicroBlaze #0
+18:17:09 INFO  : Context for processor 'microblaze_i0' is selected.
+18:17:09 INFO  : 'con' command is executed.
+18:17:09 INFO  : Context for processor 'microblaze_i1' is selected.
+18:17:09 INFO  : 'con' command is executed.
+18:17:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:17:09 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:18:00 INFO  : Restoring File Contents to Memory...
+18:18:00 ERROR : Failed to Restore File Contents to Memory, Reason: TCF command exception:
+Command: Memory set "JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1", 2147483648, 4, 786554, 0, "Qk16AAwAAAAAAHoAAABsAAAAAAIAAAACAAABABgAAAAAAAAADAATCwAAEwsAAAAAAAAAAAAAQkdScwAAAAAAAAAAAAAAAAAAAAA...
+Exception: Memory write error at 0x80000000. MDM master access port not found
+Error code: 1
+18:20:29 INFO  : Disconnected from the channel tcfchan#3.
+18:20:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:20:33 INFO  : 'fpga -state' command is executed.
+18:20:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:20:33 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:20:33 INFO  : 'jtag frequency' command is executed.
+18:20:33 INFO  : Context for processor 'microblaze_i0' is selected.
+18:20:33 INFO  : System reset is completed.
+18:20:36 INFO  : 'after 3000' command is executed.
+18:20:37 INFO  : Context for processor 'microblaze_i0' is selected.
+18:20:37 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:20:37 INFO  : Context for processor 'microblaze_i1' is selected.
+18:20:37 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:20:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:20:37 INFO  : Memory regions updated for context MicroBlaze #0
+18:20:37 INFO  : Memory regions updated for context MicroBlaze #1
+18:20:37 INFO  : Memory regions updated for context MicroBlaze #0
+18:20:37 INFO  : Context for processor 'microblaze_i0' is selected.
+18:20:37 INFO  : 'con' command is executed.
+18:20:37 INFO  : Context for processor 'microblaze_i1' is selected.
+18:20:37 INFO  : 'con' command is executed.
+18:20:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:20:37 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:22:09 INFO  : Disconnected from the channel tcfchan#4.
+18:22:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:22:15 INFO  : 'fpga -state' command is executed.
+18:22:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:22:16 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:22:16 INFO  : 'jtag frequency' command is executed.
+18:22:16 INFO  : Context for processor 'microblaze_i0' is selected.
+18:22:16 INFO  : System reset is completed.
+18:22:19 INFO  : 'after 3000' command is executed.
+18:22:19 INFO  : Context for processor 'microblaze_i0' is selected.
+18:22:19 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:22:19 INFO  : Context for processor 'microblaze_i1' is selected.
+18:22:19 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:22:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:22:19 INFO  : Memory regions updated for context MicroBlaze #0
+18:22:19 INFO  : Memory regions updated for context MicroBlaze #1
+18:22:19 INFO  : Memory regions updated for context MicroBlaze #0
+18:22:19 INFO  : Context for processor 'microblaze_i0' is selected.
+18:22:19 INFO  : 'con' command is executed.
+18:22:19 INFO  : Context for processor 'microblaze_i1' is selected.
+18:22:19 INFO  : 'con' command is executed.
+18:22:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:22:19 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:23:01 INFO  : Disconnected from the channel tcfchan#5.
+18:23:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:23:03 INFO  : 'fpga -state' command is executed.
+18:23:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:23:03 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:23:03 INFO  : 'jtag frequency' command is executed.
+18:23:03 INFO  : Context for processor 'microblaze_i0' is selected.
+18:23:03 INFO  : System reset is completed.
+18:23:06 INFO  : 'after 3000' command is executed.
+18:23:06 INFO  : Context for processor 'microblaze_i0' is selected.
+18:23:07 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:23:07 INFO  : Context for processor 'microblaze_i1' is selected.
+18:23:07 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:23:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:23:07 INFO  : Memory regions updated for context MicroBlaze #0
+18:23:07 INFO  : Memory regions updated for context MicroBlaze #1
+18:23:07 INFO  : Memory regions updated for context MicroBlaze #0
+18:23:07 INFO  : Context for processor 'microblaze_i0' is selected.
+18:23:07 INFO  : 'con' command is executed.
+18:23:07 INFO  : Context for processor 'microblaze_i1' is selected.
+18:23:07 INFO  : 'con' command is executed.
+18:23:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:23:07 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:24:23 INFO  : Restoring File Contents to Memory...
+18:24:23 ERROR : Failed to Restore File Contents to Memory, Reason: TCF command exception:
+Command: Memory set "JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1", 2147483648, 4, 786554, 0, "Qk16AAwAAAAAAHoAAABsAAAAAAIAAAACAAABABgAAAAAAAAADAATCwAAEwsAAAAAAAAAAAAAQkdScwAAAAAAAAAAAAAAAAAAAAA...
+Exception: Memory write error at 0x80000000. MDM master access port not found
+Error code: 1
+18:24:58 INFO  : Disconnected from the channel tcfchan#6.
+18:25:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:25:19 INFO  : 'fpga -state' command is executed.
+18:25:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:25:20 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:25:20 INFO  : 'jtag frequency' command is executed.
+18:25:20 INFO  : Context for processor 'microblaze_i0' is selected.
+18:25:20 INFO  : System reset is completed.
+18:25:23 INFO  : 'after 3000' command is executed.
+18:25:23 INFO  : Context for processor 'microblaze_i0' is selected.
+18:25:23 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:25:23 INFO  : Context for processor 'microblaze_i1' is selected.
+18:25:23 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:25:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:25:23 INFO  : Memory regions updated for context MicroBlaze #0
+18:25:23 INFO  : Memory regions updated for context MicroBlaze #1
+18:25:23 INFO  : Memory regions updated for context MicroBlaze #0
+18:25:23 INFO  : Context for processor 'microblaze_i0' is selected.
+18:25:23 INFO  : 'con' command is executed.
+18:25:23 INFO  : Context for processor 'microblaze_i1' is selected.
+18:25:23 INFO  : 'con' command is executed.
+18:25:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:25:23 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:26:40 ERROR : Failed to Connect to HW Server, Reason: TCF error report:
+  Command: Memory getContext "JTAG-jsn-Nexys Video-210276689540B-13636093-0"
+  Time: 2019-01-18 18:26:40.180
+  Error text: Invalid context
+  Error code: 16
+
+18:27:17 INFO  : Restoring File Contents to Memory...
+18:27:25 INFO  : Restored Contents to Memory Successfully from File /home/akayashima/Desktop/test3.bmp
+18:29:03 INFO  : Disconnected from the channel tcfchan#7.
+18:29:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:29:05 INFO  : 'fpga -state' command is executed.
+18:29:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:29:06 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:29:06 INFO  : 'jtag frequency' command is executed.
+18:29:06 INFO  : Context for processor 'microblaze_i0' is selected.
+18:29:06 INFO  : System reset is completed.
+18:29:09 INFO  : 'after 3000' command is executed.
+18:29:09 INFO  : Context for processor 'microblaze_i0' is selected.
+18:29:09 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:29:09 INFO  : Context for processor 'microblaze_i1' is selected.
+18:29:09 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:29:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:29:09 INFO  : Memory regions updated for context MicroBlaze #0
+18:29:09 INFO  : Memory regions updated for context MicroBlaze #1
+18:29:09 INFO  : Memory regions updated for context MicroBlaze #0
+18:29:09 INFO  : Context for processor 'microblaze_i0' is selected.
+18:29:09 INFO  : 'con' command is executed.
+18:29:09 INFO  : Context for processor 'microblaze_i1' is selected.
+18:29:09 INFO  : 'con' command is executed.
+18:29:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:29:09 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:31:18 INFO  : Disconnected from the channel tcfchan#9.
+18:31:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:31:20 INFO  : 'fpga -state' command is executed.
+18:31:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:31:20 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:31:20 INFO  : 'jtag frequency' command is executed.
+18:31:20 INFO  : Context for processor 'microblaze_i0' is selected.
+18:31:20 INFO  : System reset is completed.
+18:31:23 INFO  : 'after 3000' command is executed.
+18:31:23 INFO  : Context for processor 'microblaze_i0' is selected.
+18:31:23 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:31:23 INFO  : Context for processor 'microblaze_i1' is selected.
+18:31:24 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:31:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:31:24 INFO  : Memory regions updated for context MicroBlaze #0
+18:31:24 INFO  : Memory regions updated for context MicroBlaze #1
+18:31:24 INFO  : Memory regions updated for context MicroBlaze #0
+18:31:24 INFO  : Context for processor 'microblaze_i0' is selected.
+18:31:24 INFO  : 'con' command is executed.
+18:31:24 INFO  : Context for processor 'microblaze_i1' is selected.
+18:31:24 INFO  : 'con' command is executed.
+18:31:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:31:24 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:32:26 INFO  : Dumping Memory Contents ...
+18:32:30 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+18:40:43 INFO  : Disconnected from the channel tcfchan#10.
+18:40:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:40:56 INFO  : 'fpga -state' command is executed.
+18:40:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:40:56 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:40:56 INFO  : 'jtag frequency' command is executed.
+18:40:56 INFO  : Context for processor 'microblaze_i0' is selected.
+18:40:56 INFO  : System reset is completed.
+18:40:59 INFO  : 'after 3000' command is executed.
+18:40:59 INFO  : Context for processor 'microblaze_i0' is selected.
+18:40:59 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:40:59 INFO  : Context for processor 'microblaze_i1' is selected.
+18:41:00 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:41:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:41:00 INFO  : Memory regions updated for context MicroBlaze #0
+18:41:00 INFO  : Memory regions updated for context MicroBlaze #1
+18:41:00 INFO  : Memory regions updated for context MicroBlaze #0
+18:41:00 INFO  : Context for processor 'microblaze_i0' is selected.
+18:41:00 INFO  : 'con' command is executed.
+18:41:00 INFO  : Context for processor 'microblaze_i1' is selected.
+18:41:00 INFO  : 'con' command is executed.
+18:41:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:41:00 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:41:39 INFO  : Dumping Memory Contents ...
+18:41:43 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+18:42:25 INFO  : Dumping Memory Contents ...
+18:42:29 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+18:44:08 INFO  : Disconnected from the channel tcfchan#11.
+18:44:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:44:11 INFO  : 'fpga -state' command is executed.
+18:44:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:12 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:44:12 INFO  : 'jtag frequency' command is executed.
+18:44:12 INFO  : Context for processor 'microblaze_i0' is selected.
+18:44:12 INFO  : System reset is completed.
+18:44:15 INFO  : 'after 3000' command is executed.
+18:44:15 INFO  : Context for processor 'microblaze_i0' is selected.
+18:44:15 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:44:15 INFO  : Context for processor 'microblaze_i1' is selected.
+18:44:15 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:44:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:44:15 INFO  : Memory regions updated for context MicroBlaze #0
+18:44:15 INFO  : Memory regions updated for context MicroBlaze #1
+18:44:15 INFO  : Memory regions updated for context MicroBlaze #0
+18:44:15 INFO  : Context for processor 'microblaze_i0' is selected.
+18:44:15 INFO  : 'con' command is executed.
+18:44:15 INFO  : Context for processor 'microblaze_i1' is selected.
+18:44:15 INFO  : 'con' command is executed.
+18:44:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:44:15 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:44:18 INFO  : Disconnected from the channel tcfchan#12.
+18:44:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:44:40 INFO  : 'fpga -state' command is executed.
+18:44:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:40 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:44:40 INFO  : 'jtag frequency' command is executed.
+18:44:40 INFO  : Context for processor 'microblaze_i0' is selected.
+18:44:40 INFO  : System reset is completed.
+18:44:43 INFO  : 'after 3000' command is executed.
+18:44:43 INFO  : Context for processor 'microblaze_i0' is selected.
+18:44:43 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:44:43 INFO  : Context for processor 'microblaze_i1' is selected.
+18:44:43 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:44:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:44:43 INFO  : Memory regions updated for context MicroBlaze #0
+18:44:43 INFO  : Memory regions updated for context MicroBlaze #1
+18:44:43 INFO  : Memory regions updated for context MicroBlaze #0
+18:44:43 INFO  : Context for processor 'microblaze_i0' is selected.
+18:44:43 INFO  : 'con' command is executed.
+18:44:43 INFO  : Context for processor 'microblaze_i1' is selected.
+18:44:43 INFO  : 'con' command is executed.
+18:44:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:44:43 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:45:23 INFO  : Dumping Memory Contents ...
+18:45:26 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+18:52:53 INFO  : Disconnected from the channel tcfchan#13.
+18:52:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+18:52:55 INFO  : 'fpga -state' command is executed.
+18:52:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:52:55 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+18:52:55 INFO  : 'jtag frequency' command is executed.
+18:52:55 INFO  : Context for processor 'microblaze_i0' is selected.
+18:52:55 INFO  : System reset is completed.
+18:52:58 INFO  : 'after 3000' command is executed.
+18:52:58 INFO  : Context for processor 'microblaze_i0' is selected.
+18:52:58 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+18:52:58 INFO  : Context for processor 'microblaze_i1' is selected.
+18:52:59 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+18:52:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+18:52:59 INFO  : Memory regions updated for context MicroBlaze #0
+18:52:59 INFO  : Memory regions updated for context MicroBlaze #1
+18:52:59 INFO  : Memory regions updated for context MicroBlaze #0
+18:52:59 INFO  : Context for processor 'microblaze_i0' is selected.
+18:52:59 INFO  : 'con' command is executed.
+18:52:59 INFO  : Context for processor 'microblaze_i1' is selected.
+18:52:59 INFO  : 'con' command is executed.
+18:52:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+18:52:59 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+18:53:30 INFO  : Dumping Memory Contents ...
+18:53:33 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+19:06:59 INFO  : Disconnected from the channel tcfchan#14.
+19:07:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+19:07:03 INFO  : 'fpga -state' command is executed.
+19:07:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:07:03 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+19:07:03 INFO  : 'jtag frequency' command is executed.
+19:07:03 INFO  : Context for processor 'microblaze_i0' is selected.
+19:07:03 INFO  : System reset is completed.
+19:07:06 INFO  : 'after 3000' command is executed.
+19:07:06 INFO  : Context for processor 'microblaze_i0' is selected.
+19:07:07 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+19:07:07 INFO  : Context for processor 'microblaze_i1' is selected.
+19:07:07 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+19:07:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+19:07:07 INFO  : Memory regions updated for context MicroBlaze #0
+19:07:07 INFO  : Memory regions updated for context MicroBlaze #1
+19:07:07 INFO  : Memory regions updated for context MicroBlaze #0
+19:07:07 INFO  : Context for processor 'microblaze_i0' is selected.
+19:07:07 INFO  : 'con' command is executed.
+19:07:07 INFO  : Context for processor 'microblaze_i1' is selected.
+19:07:07 INFO  : 'con' command is executed.
+19:07:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+19:07:07 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+19:10:44 INFO  : Disconnected from the channel tcfchan#15.
+19:10:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+19:10:46 INFO  : 'fpga -state' command is executed.
+19:10:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:10:46 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+19:10:46 INFO  : 'jtag frequency' command is executed.
+19:10:46 INFO  : Context for processor 'microblaze_i0' is selected.
+19:10:46 INFO  : System reset is completed.
+19:10:49 INFO  : 'after 3000' command is executed.
+19:10:49 INFO  : Context for processor 'microblaze_i0' is selected.
+19:10:49 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+19:10:49 INFO  : Context for processor 'microblaze_i1' is selected.
+19:10:50 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+19:10:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+19:10:50 INFO  : Memory regions updated for context MicroBlaze #0
+19:10:50 INFO  : Memory regions updated for context MicroBlaze #1
+19:10:50 INFO  : Memory regions updated for context MicroBlaze #0
+19:10:50 INFO  : Context for processor 'microblaze_i0' is selected.
+19:10:50 INFO  : 'con' command is executed.
+19:10:50 INFO  : Context for processor 'microblaze_i1' is selected.
+19:10:50 INFO  : 'con' command is executed.
+19:10:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+19:10:50 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+19:11:37 INFO  : Dumping Memory Contents ...
+19:11:40 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+19:16:23 INFO  : Disconnected from the channel tcfchan#16.
+19:16:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+19:16:25 INFO  : 'fpga -state' command is executed.
+19:16:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:16:25 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+19:16:25 INFO  : 'jtag frequency' command is executed.
+19:16:25 INFO  : Context for processor 'microblaze_i0' is selected.
+19:16:25 INFO  : System reset is completed.
+19:16:28 INFO  : 'after 3000' command is executed.
+19:16:28 INFO  : Context for processor 'microblaze_i0' is selected.
+19:16:28 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+19:16:28 INFO  : Context for processor 'microblaze_i1' is selected.
+19:16:28 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+19:16:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+19:16:28 INFO  : Memory regions updated for context MicroBlaze #0
+19:16:28 INFO  : Memory regions updated for context MicroBlaze #1
+19:16:28 INFO  : Memory regions updated for context MicroBlaze #0
+19:16:29 INFO  : Context for processor 'microblaze_i0' is selected.
+19:16:29 INFO  : 'con' command is executed.
+19:16:29 INFO  : Context for processor 'microblaze_i1' is selected.
+19:16:29 INFO  : 'con' command is executed.
+19:16:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+19:16:29 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+19:17:19 INFO  : Dumping Memory Contents ...
+19:17:22 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+19:37:28 INFO  : Disconnected from the channel tcfchan#17.
+19:37:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+19:37:34 INFO  : 'fpga -state' command is executed.
+19:37:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:37:34 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+19:37:34 INFO  : 'jtag frequency' command is executed.
+19:37:34 INFO  : Context for processor 'microblaze_i0' is selected.
+19:37:34 INFO  : System reset is completed.
+19:37:37 INFO  : 'after 3000' command is executed.
+19:37:37 INFO  : Context for processor 'microblaze_i0' is selected.
+19:37:37 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+19:37:37 INFO  : Context for processor 'microblaze_i1' is selected.
+19:37:37 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+19:37:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+19:37:37 INFO  : Memory regions updated for context MicroBlaze #0
+19:37:37 INFO  : Memory regions updated for context MicroBlaze #1
+19:37:37 INFO  : Memory regions updated for context MicroBlaze #0
+19:37:37 INFO  : Context for processor 'microblaze_i0' is selected.
+19:37:37 INFO  : 'con' command is executed.
+19:37:37 INFO  : Context for processor 'microblaze_i1' is selected.
+19:37:37 INFO  : 'con' command is executed.
+19:37:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+19:37:37 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+19:38:26 INFO  : Dumping Memory Contents ...
+19:38:29 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+19:44:15 INFO  : Disconnected from the channel tcfchan#18.
+19:44:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+19:44:17 INFO  : 'fpga -state' command is executed.
+19:44:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:44:17 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+19:44:17 INFO  : 'jtag frequency' command is executed.
+19:44:17 INFO  : Context for processor 'microblaze_i0' is selected.
+19:44:17 INFO  : System reset is completed.
+19:44:20 INFO  : 'after 3000' command is executed.
+19:44:20 INFO  : Context for processor 'microblaze_i0' is selected.
+19:44:20 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+19:44:20 INFO  : Context for processor 'microblaze_i1' is selected.
+19:44:21 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+19:44:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+19:44:21 INFO  : Memory regions updated for context MicroBlaze #0
+19:44:21 INFO  : Memory regions updated for context MicroBlaze #1
+19:44:21 INFO  : Memory regions updated for context MicroBlaze #0
+19:44:21 INFO  : Context for processor 'microblaze_i0' is selected.
+19:44:21 INFO  : 'con' command is executed.
+19:44:21 INFO  : Context for processor 'microblaze_i1' is selected.
+19:44:21 INFO  : 'con' command is executed.
+19:44:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+19:44:21 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+19:45:18 INFO  : Dumping Memory Contents ...
+19:45:21 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+20:04:26 INFO  : Disconnected from the channel tcfchan#19.
+20:04:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276689540B" && level==0} -index 0' command is executed.
+20:04:28 INFO  : 'fpga -state' command is executed.
+20:04:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:28 INFO  : Jtag cable 'Digilent Nexys Video 210276689540B' is selected.
+20:04:28 INFO  : 'jtag frequency' command is executed.
+20:04:28 INFO  : Context for processor 'microblaze_i0' is selected.
+20:04:28 INFO  : System reset is completed.
+20:04:31 INFO  : 'after 3000' command is executed.
+20:04:31 INFO  : Context for processor 'microblaze_i0' is selected.
+20:04:32 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf' is downloaded to processor 'microblaze_i0'.
+20:04:32 INFO  : Context for processor 'microblaze_i1' is selected.
+20:04:32 INFO  : The application '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf' is downloaded to processor 'microblaze_i1'.
+20:04:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/MicroBlazei0.elf
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+dow /home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei1/Debug/MicroBlazei1.elf
+----------------End of Script----------------
+
+20:04:32 INFO  : Memory regions updated for context MicroBlaze #0
+20:04:32 INFO  : Memory regions updated for context MicroBlaze #1
+20:04:32 INFO  : Memory regions updated for context MicroBlaze #0
+20:04:32 INFO  : Context for processor 'microblaze_i0' is selected.
+20:04:32 INFO  : 'con' command is executed.
+20:04:32 INFO  : Context for processor 'microblaze_i1' is selected.
+20:04:32 INFO  : 'con' command is executed.
+20:04:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+targets -set -nocase -filter {name =~ "microblaze*#1" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276689540B"} -index 0
+con
+----------------End of Script----------------
+
+20:04:32 INFO  : Launch script is exported to file '/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/debug.tcl'
+20:05:18 INFO  : Dumping Memory Contents ...
+20:05:21 INFO  : Dumped Memory Contents Successfully to /home/akayashima/Desktop/Untitled.bmp
+20:26:31 INFO  : Disconnected from the channel tcfchan#20.

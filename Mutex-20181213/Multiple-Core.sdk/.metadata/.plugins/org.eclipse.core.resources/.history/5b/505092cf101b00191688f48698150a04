@@ -141,7 +141,7 @@ int Smooth(XMutex *InstancePtr)
 
 	unsigned char *wp = (outIMG + 54);
 
-	//outIMG+=54;//54バイト目から画素情報を格納する.
+	//outIMG+=54;//55バイト目から画素情報を格納する.
 	  /*フィルタサイズ3*3*/
 	  for(i=1;i<biWidth-1;i++){
 			for(j=1;j<biHeight-1;j++){
@@ -173,7 +173,7 @@ int Smooth(XMutex *InstancePtr)
 			    		//*outIMG = *(inIMG+(biWidth*(i-1)*3)+3*(j+1)+k);
 			    		//*(outIMG+(biWidth*(i-1)*3)+(3*j)+k) = *(inIMG+(biWidth*(i-1)*3)+(3*j)+k);
 
-			    		*(wp+(biWidth*(i-1))+(3*(j-1))+k) = *(inIMG+(biWidth*(i-1))+(3*(j-1))+k);
+			    		*(wp+(biWidth*(j-1))+(3*(i-1))+k) = *(inIMG+(biWidth*(j-1))+(3*(i-1))+k);
 			    	}
 			    	if(i==biWidth-2){//最後の行のピクセルをコピーする
 			    		//*outIMG = *(inIMG+(biWidth*(i+1)*3)+3*(j-1)+k);
@@ -181,7 +181,7 @@ int Smooth(XMutex *InstancePtr)
 			    		//*outIMG = *(inIMG+(biWidth*(i+1)*3)+3*(j+1)+k);
 			    		//*(outIMG+(biWidth*(i+1)*3)+(3*j)+k) = *(inIMG+(biWidth*(i+1)*3)+(3*j)+k);
 
-			    		*(wp+(biWidth*(i+1)*3)+(3*(j-1))+k) = *(inIMG+(biWidth*(i+1)*3)+(3*(j-1))+k);
+			    		*(wp+(biWidth*(j+1)*3)+(3*(i-(biWidth-2)))+k) = *(inIMG+(biWidth*(j+1)*3)+(3*(i-(biWidth-2)))+k);
 			    	}
 			    	if(j==1){//左1列のピクセルをコピーする
 			    		//*outIMG = *(inIMG+(biWidth*(j-1)*3)+3*(i-1)+k);
@@ -197,7 +197,7 @@ int Smooth(XMutex *InstancePtr)
 			    		//*outIMG = *(inIMG+(biWidth*(j+1)*3)+3*(i+1)+k);
 			    		//*(outIMG+(biWidth*(j+1)*3)+(3*i)+k) = *(inIMG+(biWidth*(j+1)*3)+(3*i)+k);
 
-			    		*(wp+(biWidth*i*3)+(3*(i-1))+k) = *(inIMG+(biWidth*i*3)+(3*(i-1))+k);
+			    		*(wp+(biWidth*(i+1))+(3*(j-(biHeight-2)))+k) = *(inIMG+(biWidth*(i+1))+(3*(j-(biHeight-2)))+k);
 
 			    	}
 
