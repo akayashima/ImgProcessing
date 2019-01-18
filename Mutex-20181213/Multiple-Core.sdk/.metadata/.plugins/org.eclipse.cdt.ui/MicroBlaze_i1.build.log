@@ -1,0 +1,55 @@
+16:34:31 **** Build of configuration Debug for project MicroBlaze_i1 ****
+make all 
+Building file: ../src/i1_20181101.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i1_20181101.o" -I../../MicroBlaze_i1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i1_20181101.d" -MT"src/i1_20181101.o" -o "src/i1_20181101.o" "../src/i1_20181101.c"
+../src/i1_20181101.c: In function 'main':
+../src/i1_20181101.c:18:15: warning: unused variable 'ConfigPtr' [-Wunused-variable]
+  XMbox_Config ConfigPtr;
+               ^~~~~~~~~
+../src/i1_20181101.c:17:8: warning: unused variable 'InstancePtr' [-Wunused-variable]
+  XMbox InstancePtr;
+        ^~~~~~~~~~~
+../src/i1_20181101.c:16:75: warning: unused variable 'Value' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                                                           ^~~~~
+../src/i1_20181101.c:16:70: warning: unused variable 'Mask' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                                                      ^~~~
+../src/i1_20181101.c:16:57: warning: unused variable 'BytesSentPtr' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                                         ^~~~~~~~~~~~
+../src/i1_20181101.c:16:43: warning: unused variable 'BytesRecvdPtr' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                           ^~~~~~~~~~~~~
+../src/i1_20181101.c:16:28: warning: unused variable 'RequestedBytes' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                            ^~~~~~~~~~~~~~
+../src/i1_20181101.c:16:18: warning: unused variable 'BufferPtr' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                  ^~~~~~~~~
+../src/i1_20181101.c:16:13: warning: unused variable 'tEnd' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+             ^~~~
+../src/i1_20181101.c:16:6: warning: unused variable 'tStart' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+      ^~~~~~
+../src/i1_20181101.c:48:4: warning: 'i' is used uninitialized in this function [-Wuninitialized]
+    xil_printf("\%d \r\n", i * 10);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/i1_20181101.c
+ 
+Building target: MicroBlaze_i1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze_i1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze_i1.elf"  ./src/i1_20181101.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlaze_i1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlaze_i1.elf  |tee "MicroBlaze_i1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5516	    272	   3108	   8896	   22c0	MicroBlaze_i1.elf
+Finished building: MicroBlaze_i1.elf.size
+ 
+
+16:34:31 Build Finished (took 210ms)
+

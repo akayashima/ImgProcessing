@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <xmbox_hw.h>
+#include <xstatus.h>
+#include "../../MicroBlazei1_bsp/microblaze_i0/include/xil_printf.h"
+#include "../../MicroBlazei1_bsp/microblaze_i0/include/xmbox.h"
+#include "../../MicroBlazei1_bsp/microblaze_i0/include/xtmrctr.h"
+
+XTmrCtr TimerCounterInst;
+
+void Show_Time(u32, u32);
+int init();
+
+int main()
+{
+	u32 tStart,tEnd,Mask,Value;
+	u32 BufferTx[20];
+	u32 BufferRx[20];
+	u32 RequestedBytes=20,BytesRecvdPtr=888,BytesSentPtr=999;
+	//XMbox ConfigPtr;
+	XMbox mbox[2];
+	XMbox_Config *InsPtr[2];
+	int i=1,Status;
+	u32 mbox_status;
+
+	//init();
+
+    //-- Mailbox 0
+	//InsPtr[0] = XMbox_LookupConfig(XPAR_MBOX_0_DEVICE_ID);
+	//Status = XMbox_CfgInitialize(&mbox[0], InsPtr[0], XPAR_MBOX_0_BASEADDR);//mailbox0 initialize
+	//if(Status != XST_SUCCESS){
+	//	xil_printf("\r\n Mailbox Initialize Error ");
+	//}
+
+	//XMbox_SetSendThreshold(&mbox[0], 32);
+	//XMbox_SetReceiveThreshold(&mbox[0], 32);
+
+	//XMbox_ResetFifos(&mbox[0]);
+
+	//-- Mailbox 1
+	InsPtr[1] = XMbox_LookupConfig(XPAR_MBOX_1_DEVICE_ID);
+	Status = XMbox_CfgInitialize(&mbox[1], InsPtr[1], XPAR_MBOX_1_BASEADDR);//mailbox1 initialize
+	if(Status != XST_SUCCESS){
+		xil_printf("\r\n Mailbox Initialize Error ");
+	}
+
+	XMbox_SetSendThreshold(&mbox[1], 32);
+	XMbox_SetReceiveThreshold(&mbox[1], 32);
+
+	//XMbox_ResetFifos(&mbox[1]);
+
+	mbox_status = XMbox_GetStatus(&mbox[1]);
+
+	Status = XMbox_Read(&mbox[1],&BufferRx[0], 80, &BytesRecvdPtr);
+			if(Status != XST_SUCCESS){
+				xil_printf("\r\n Mailbox Write Error /r/n");
+			}
+
+	//XMbox_CfgInitialize(&InstancePtr, &ConfigPtr, XPAR_MAILBOX_0_IF_1_BASEADDR);//mailbox initialize
+	//XMbox_Read(&InstancePtr,&BufferPtr,&RequestedBytes,&BytesRecvdPtr);//mailbox read
+	//XMbox_ReadBlocking(&InstancePtr,&BufferPtr,&RequestedBytes);
+	//XMbox_Write(&InstancePtr,&BufferPtr,&RequestedBytes,&BytesSentPtr);
+	//XMbox_WriteBlocking(&InstancePtr,&BufferPtr,&RequestedBytes);
+	//XMbox_IsEmpty(&InstancePtr);
+	//XMbox_IsFull(&InstancePtr);
+	//XMbox_Flush(&InstancePtr);
+	//XMbox_ResetFifos(&InstancePtr);
+	//XMbox_SetInterruptEnable(&InstancePtr,&Mask);
+	//XMbox_GetInterruptEnable(&InstancePtr);
+	//XMbox_GetInterruptStatus(&InstancePtr);
+	//XMbox_ClearInterrupt(&InstancePtr,&Mask);
+	//XMbox_SetSendThreshold(&InstancePtr,&Value);
+	//XMbox_SetReceiveThreshold(&InstancePtr,&Value);
+	//XMbox_GetStatus(&InstancePtr);
+
+	//tStart = XTmrCtr_GetValue(&TimerCounterInst, 0);
+
+	//tEnd = XTmrCtr_GetValue(&TimerCounterInst, 0);
+	//Show_Time(tEnd,tStart);
+
+	for (;;) {
+			//xil_printf("\%d \r\n", i * 10);
+	}
+}
+
+int init()
+{
+	int Status;
+
+	Status = XTmrCtr_Initialize(&TimerCounterInst, XPAR_AXI_TIMER_0_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("\r\n Timer Initialize Error \r\n");
+		return XST_FAILURE;
+	}
+	XTmrCtr_SetOptions(&TimerCounterInst, 0, XTC_AUTO_RELOAD_OPTION);
+	XTmrCtr_Start(&TimerCounterInst, 0);
+	return 0;
+}
+
+void Show_Time(u32 tEnd, u32 tStart)
+{
+	double tt = 0.0;
+	int m, b;
+	//float tt=0.0;
+
+	tt = (1.0 * (double) (tEnd - tStart) / 100000000.0);
+	//tt = (1.0 * (float)(tEnd - tStart) / 100000000.0);
+
+	m = tt;	//小数点以下を切り捨ててsecとする
+	b = (tt - m) * 1000000000;	//nsecまで表示
+
+	xil_printf("\r\n(MicroBlaze)\r\n");
+	xil_printf("\r\n Time=%4d.%09d[s]\r\n", m, b);
+}

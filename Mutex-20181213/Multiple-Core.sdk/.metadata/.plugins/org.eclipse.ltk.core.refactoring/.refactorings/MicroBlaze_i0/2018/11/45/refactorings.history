@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MicroBlaze_i0/src/20181101.c&apos; to &apos;i0_20181101.c&apos;" description="Rename resource &apos;20181101.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/20181101.c" name="i0_20181101.c" stamp="1541406645225" updateReferences="true"/>
+</session>

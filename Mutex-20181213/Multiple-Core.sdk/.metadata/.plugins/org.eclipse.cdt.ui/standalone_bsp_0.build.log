@@ -1,0 +1,6 @@
+17:18:56 **** Build of project standalone_bsp_0 ****
+make -k all 
+make: *** ターゲット `all' を make するルールがありません.
+
+17:18:56 Build Finished (took 67ms)
+

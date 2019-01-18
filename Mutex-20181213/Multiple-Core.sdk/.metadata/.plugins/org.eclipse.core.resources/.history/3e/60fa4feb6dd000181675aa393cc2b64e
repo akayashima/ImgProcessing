@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <xil_printf.h>
+#include "xtmrctr.h"
+#define N 10
+void Show_Time(u32,u32);
+int init();
+
+XTmrCtr TimerCounterInst;
+
+int main()
+{
+  u32 tStart, tEnd;
+  int i,j=0;
+  init();
+
+  xil_printf("\r\n i=%d \r\n",i);
+
+  tStart = XTmrCtr_GetValue(&TimerCounterInst, 0);
+  for(i=0;i<N;i++){
+    for(j=0;j<N;j++)
+	  i=i+1;
+	  //if(i==10000000)
+		  //xil_printf("\r\n flag \r\n");
+  }
+  //xil_printf("\r\n flag \r\n");
+
+  tEnd = XTmrCtr_GetValue(&TimerCounterInst, 0);
+  xil_printf("\r\n i=%d \r\n",i);
+  Show_Time(tEnd,tStart);
+
+  return 0;
+}
+
+int init()
+{
+	int Status;
+
+	Status = XTmrCtr_Initialize(&TimerCounterInst, XPAR_AXI_TIMER_0_DEVICE_ID);
+		if(Status != XST_SUCCESS){
+			xil_printf("\r\n Timer Initialize Error \r\n");
+	        return XST_FAILURE;
+		}
+		XTmrCtr_SetOptions(&TimerCounterInst, 0, XTC_AUTO_RELOAD_OPTION);
+		XTmrCtr_Start(&TimerCounterInst, 0);
+		return 0;
+}
+
+void Show_Time(u32 tEnd , u32 tStart)
+{
+	double tt=0.0;
+
+	tt = (1.0 * (double)(tEnd - tStart) / 100000000.0);
+
+	int m = tt;//小数点以下を切り捨てて分とする
+	int b = (tt - m) * 1000000000;//nsまで表示
+
+	xil_printf("\r\n(MicroBlaze)\r\n");
+	xil_printf("\r\n Time=%4d.%09d[s]\r\n",m,b);
+}

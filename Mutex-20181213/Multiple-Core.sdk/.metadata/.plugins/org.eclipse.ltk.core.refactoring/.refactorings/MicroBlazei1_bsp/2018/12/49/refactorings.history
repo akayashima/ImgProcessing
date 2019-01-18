@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MicroBlazei1_bsp/microblaze_i0&apos; to &apos;microblaze_i1&apos;" description="Rename resource &apos;microblaze_i0&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="microblaze_i0" name="microblaze_i1" stamp="1544000314589" updateReferences="true"/>
+</session>

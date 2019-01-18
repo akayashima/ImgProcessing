@@ -1,0 +1,29 @@
+05:46:16 **** Incremental Build of configuration Debug for project maze_mb ****
+make all 
+Building file: ../src/Sort_MB.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Sort_MB.o" -I../../maze_mb_bsp/microblaze_0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Sort_MB.d" -MT"src/Sort_MB.o" -o "src/Sort_MB.o" "../src/Sort_MB.c"
+../src/Sort_MB.c: In function 'main':
+../src/Sort_MB.c:58:9: warning: unused variable 'tt' [-Wunused-variable]
+  double tt=0.0;
+         ^~
+../src/Sort_MB.c: In function 'init':
+../src/Sort_MB.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/Sort_MB.c
+ 
+Building target: maze_mb.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../maze_mb_bsp/microblaze_0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "maze_mb.elf"  ./src/Sort_MB.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: maze_mb.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size maze_mb.elf  |tee "maze_mb.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17004	    424	200160084	200177512	bee7768	maze_mb.elf
+Finished building: maze_mb.elf.size
+ 
+
+05:46:16 Build Finished (took 109ms)
+

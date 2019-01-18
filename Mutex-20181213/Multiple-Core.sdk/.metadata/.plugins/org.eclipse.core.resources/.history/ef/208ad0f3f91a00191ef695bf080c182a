@@ -1,0 +1,232 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <xstatus.h>
+#include <xil_printf.h>
+#include <xtmrctr.h>
+#include <xmutex.h>
+
+XTmrCtr TimerCounterInst;
+u32 *dram = (u32 *)XPAR_MIG7SERIES_0_BASEADDR;
+
+void Show_Time(u32, u32);
+void Mutex_Lock(XMutex *,u8);
+void Mutex_GetStatus(XMutex *,u8,u32 *,u32 *);
+int Mutex_Trylock(XMutex *,u8);
+int Mutex_Unlock(XMutex *,u8);
+int Mutex_IsLocked(XMutex *,u8);
+int Mutex_GetUser(XMutex *, u8, u32 *);
+int Mutex_SetUser(XMutex *,u8,u32);
+int wr_dram(u32);
+int rd_dram(u32);
+
+//int init();
+
+int main()
+{
+	//u32 tStart,tEnd;
+	//XMbox ConfigPtr;
+	XMutex XMutex[2];
+	XMutex_Config *InsPtr[2];
+	u32 xmutex_status;
+
+	xil_printf("\r\n MB 1 Start");
+
+	//init();
+
+	//-- Mailbox 1
+	InsPtr[1] = XMutex_LookupConfig(XPAR_MUTEX_0_IF_1_DEVICE_ID);
+
+	xmutex_status = XMutex_CfgInitialize(&XMutex[1], InsPtr[1], XPAR_MUTEX_0_IF_0_BASEADDR);//Mutex1 initialize
+		if(xmutex_status != XST_SUCCESS){
+			xil_printf("\r\n Mutex-1 Initialize Error ");
+		}
+
+	for(;;){
+
+		/*****************************処理1*****************************/
+		while(1){
+		xmutex_status = Mutex_Trylock(&XMutex[1],XPAR_MUTEX_0_IF_1_NUM_MUTEX-1);//Mutex0の状態を監視
+		if(xmutex_status == 1)//dramに値が書かれた
+			break;
+		}
+		//rd_dram(dram);//dramから値を読む
+		/*****************************処理2*****************************/
+		xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_0_IF_0_NUM_MUTEX-1);//Mutex0をロック
+		xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_0_IF_0_NUM_MUTEX-1,0);//Mutex0のユーザレジスタを0にする.
+		xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_0_IF_0_NUM_MUTEX-1);//Mutex0のユーザレジスタをUnlock
+
+		/*****************************処理3*****************************/
+		xil_printf("\r\n %d \n",(*dram)*10);
+
+		/*****************************処理4*****************************/
+		xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_0_IF_0_NUM_MUTEX);//Mutex1をロック
+		xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_0_IF_0_NUM_MUTEX,1);//Mutex1のユーザレジスタを1にする.
+		xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_0_IF_0_NUM_MUTEX);//Mutex1のユーザレジスタをUnlock
+
+	}
+}
+
+/*int init()
+{
+	int Status;
+
+	Status = XTmrCtr_Initialize(&TimerCounterInst, XPAR_AXI_TIMER_0_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("\r\n Timer Initialize Error \r\n");
+		return XST_FAILURE;
+	}
+	XTmrCtr_SetOptions(&TimerCounterInst, 0, XTC_AUTO_RELOAD_OPTION);
+	XTmrCtr_Start(&TimerCounterInst, 0);
+	return 0;
+}*/
+
+void Show_Time(u32 tEnd, u32 tStart)
+{
+	double tt = 0.0;
+	int m, b;
+	//float tt=0.0;
+
+	tt = (1.0 * (double) (tEnd - tStart) / 100000000.0);
+	//tt = (1.0 * (float)(tEnd - tStart) / 100000000.0);
+
+	m = tt;	//小数点以下を切り捨ててsecとする
+	b = (tt - m) * 1000000000;	//nsecまで表示
+
+	xil_printf("\r\n(MicroBlaze)\r\n");
+	xil_printf("\r\n Time=%4d.%09d[s]\r\n", m, b);
+}
+
+int wr_dram(u32 dram)
+{
+
+	return 0;
+}
+
+int rd_dram(u32 dram)
+{
+	return 0;
+}
+
+void Mutex_Lock(XMutex *InstancePtr, u8 MutexNumber)
+{
+	u32 LockPattern = ((XPAR_CPU_ID << OWNER_SHIFT) | LOCKED_BIT);
+	u32 Value;
+
+	Xil_AssertVoid(InstancePtr != NULL);
+	Xil_AssertVoid(MutexNumber < InstancePtr->Config.NumMutex);
+
+	while (1){
+		XMutex_WriteReg(InstancePtr->Config.BaseAddress, MutexNumber,
+				XMU_MUTEX_REG_OFFSET, LockPattern);
+		Value = XMutex_ReadReg(InstancePtr->Config.BaseAddress,
+					MutexNumber,
+					XMU_MUTEX_REG_OFFSET);
+		if (Value == LockPattern) {
+			break;
+		}
+	}
+}
+
+int Mutex_Trylock(XMutex *InstancePtr, u8 MutexNumber)
+{
+	u32 LockPattern = ((XPAR_CPU_ID << OWNER_SHIFT) | LOCKED_BIT);
+	u32 Value;
+
+	Xil_AssertNonvoid(InstancePtr != NULL);
+	Xil_AssertNonvoid(MutexNumber < InstancePtr->Config.NumMutex);
+
+	XMutex_WriteReg(InstancePtr->Config.BaseAddress, MutexNumber,
+			XMU_MUTEX_REG_OFFSET, LockPattern);
+
+	Value = XMutex_ReadReg(InstancePtr->Config.BaseAddress, MutexNumber,
+				XMU_MUTEX_REG_OFFSET);
+	if (Value == LockPattern) {
+		return XST_SUCCESS;
+	} else{
+		return XST_DEVICE_BUSY;
+	}
+}
+
+int Mutex_Unlock(XMutex *InstancePtr, u8 MutexNumber)
+{
+	u32 UnLockPattern = ((XPAR_CPU_ID << OWNER_SHIFT) | 0x0);
+	u32 Value;
+
+	Xil_AssertNonvoid(InstancePtr != NULL);
+	Xil_AssertNonvoid(MutexNumber < InstancePtr->Config.NumMutex);
+
+	Value = XMutex_ReadReg(InstancePtr->Config.BaseAddress, MutexNumber,
+				XMU_MUTEX_REG_OFFSET);
+
+	/* Verify that the caller actually owns the Mutex */
+	if ((Value & OWNER_MASK) != UnLockPattern) {
+		return XST_FAILURE;
+	}
+
+	XMutex_WriteReg(InstancePtr->Config.BaseAddress, MutexNumber,
+			XMU_MUTEX_REG_OFFSET, UnLockPattern);
+
+	return XST_SUCCESS;
+}
+
+int Mutex_IsLocked(XMutex *InstancePtr, u8 MutexNumber)
+{
+	u32 Value;
+
+	Xil_AssertNonvoid(InstancePtr != NULL);
+	Xil_AssertNonvoid(MutexNumber < InstancePtr->Config.NumMutex);
+
+	Value = XMutex_ReadReg(InstancePtr->Config.BaseAddress, MutexNumber,
+				XMU_MUTEX_REG_OFFSET);
+
+	return ((int)(Value & LOCKED_BIT));
+}
+
+void Mutex_GetStatus(XMutex *InstancePtr, u8 MutexNumber, u32 *Locked,
+			u32 *Owner)
+{
+	u32 Value;
+
+	Xil_AssertVoid(InstancePtr != NULL);
+	Xil_AssertVoid(MutexNumber < InstancePtr->Config.NumMutex);
+	Xil_AssertVoid(Locked != NULL);
+	Xil_AssertVoid(Owner != NULL);
+
+	Value = XMutex_ReadReg(InstancePtr->Config.BaseAddress, MutexNumber,
+			       XMU_MUTEX_REG_OFFSET);
+	*Locked = (Value & LOCKED_BIT);
+	*Owner = (Value & OWNER_MASK) >> OWNER_SHIFT;
+}
+
+int Mutex_GetUser(XMutex *InstancePtr, u8 MutexNumber, u32 *User)
+{
+	Xil_AssertNonvoid(InstancePtr != NULL);
+	Xil_AssertNonvoid(MutexNumber < InstancePtr->Config.NumMutex);
+	Xil_AssertNonvoid(User != NULL);
+
+	if (!(InstancePtr->Config.UserReg)) {
+		return XST_NO_FEATURE;
+	}
+
+	*User = XMutex_ReadReg(InstancePtr->Config.BaseAddress, MutexNumber,
+				XMU_USER_REG_OFFSET);
+
+	xil_printf("\r\n %d ",(*User)*10);
+
+	return XST_SUCCESS;
+}
+
+int Mutex_SetUser(XMutex *InstancePtr, u8 MutexNumber, u32 User)
+{
+	Xil_AssertNonvoid(InstancePtr != NULL);
+	Xil_AssertNonvoid(MutexNumber < InstancePtr->Config.NumMutex);
+
+	if (!(InstancePtr->Config.UserReg)) {
+		return XST_NO_FEATURE;
+	}
+
+	XMutex_WriteReg(InstancePtr->Config.BaseAddress, MutexNumber,
+			XMU_USER_REG_OFFSET, User);
+
+	return XST_SUCCESS;
+}

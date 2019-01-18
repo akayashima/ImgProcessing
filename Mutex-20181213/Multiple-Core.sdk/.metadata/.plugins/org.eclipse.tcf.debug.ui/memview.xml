@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Memory>
+<Block Addr="0x43600000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1"/>
+<Block Addr="0x43600000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1"/>
+<Block Addr="0x43610000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x43610000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1"/>
+<Block Addr="0x43610000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1"/>
+<Block Addr="0x43600000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1"/>
+<Block Addr="0x80000000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x80000000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x80000000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x80000000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+<Rendering ID="org.eclipse.debug.ui.rendering.raw_memory" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x80010000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x80100000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x80000000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.1" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+</Memory>

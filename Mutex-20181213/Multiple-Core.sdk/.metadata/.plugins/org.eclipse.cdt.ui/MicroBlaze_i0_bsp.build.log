@@ -1,0 +1,758 @@
+16:34:28 **** Build of project MicroBlaze_i0_bsp ****
+make -k all 
+Running Make include in microblaze_i0/libsrc/mbox_v4_3/src
+make -C microblaze_i0/libsrc/mbox_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/cpu_v2_6/src
+make -C microblaze_i0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/standalone_v6_5/src
+make -C microblaze_i0/libsrc/standalone_v6_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/uartlite_v3_2/src
+make -C microblaze_i0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/mutex_v4_3/src
+make -C microblaze_i0/libsrc/mutex_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/bram_v4_2/src
+make -C microblaze_i0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/gpio_v4_3/src
+make -C microblaze_i0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/intc_v3_7/src
+make -C microblaze_i0/libsrc/intc_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_i0/libsrc/tmrctr_v4_4/src
+make -C microblaze_i0/libsrc/tmrctr_v4_4/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_i0/libsrc/mbox_v4_3/src
+make -C microblaze_i0/libsrc/mbox_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling mbox
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmbox_hw.h:77,
+                 from xmbox.h:181,
+                 from xmbox.c:74:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xmbox_g.c:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmbox_hw.h:77,
+                 from xmbox.h:181,
+                 from xmbox_g.c:41:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xmbox_g.c:48:1: error: expected expression at end of input
+ {
+ ^
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmbox_hw.h:77,
+                 from xmbox.h:181,
+                 from xmbox_sinit.c:55:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xmbox_sinit.c:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xmbox_sinit.c: In function 'XMbox_LookupConfig':
+xmbox_sinit.c:89:27: error: 'XPAR_XMBOX_NUM_INSTANCES' undeclared (first use in this function)
+  for (Index = 0U; Index < XPAR_XMBOX_NUM_INSTANCES; Index++) {
+Running Make libs in microblaze_i0/libsrc/cpu_v2_6/src
+                           ^~~~~~~~~~~~~~~~~~~~~~~~
+make -C microblaze_i0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+xmbox_sinit.c:89:27: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [libs] エラー 1
+Compiling cpu
+make: *** [microblaze_i0/libsrc/mbox_v4_3/src/make.libs] エラー 2
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_i0/libsrc/standalone_v6_5/src
+make -C microblaze_i0/libsrc/standalone_v6_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:65,
+                 from xil_misc_psreset_api.h:58,
+                 from xil_misc_psreset_api.c:55:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from inbyte.c:1:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from ../../../include/xuartlite_l.h:73,
+                 from inbyte.c:2:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from print.c:20:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:65,
+                 from xplatform_info.c:62:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_sleep.h:68:0,
+                 from microblaze_sleep.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:65,
+                 from sleep.h:37,
+                 from microblaze_sleep.h:69,
+                 from microblaze_sleep.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:65,
+                 from xil_io.c:55:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_printf.c:8:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from outbyte.c:1:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from ../../../include/xuartlite_l.h:73,
+                 from outbyte.c:2:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:65,
+                 from xil_testmem.c:51:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from pvr.c:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from pvr.h:63:0,
+                 from pvr.c:42:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_printf.h:12:0,
+                 from xil_io.h:65,
+                 from xil_testio.c:52:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xil_cache.h:78:0,
+                 from xil_cache.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_interrupts_g.c:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_cache_ext.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_dcache_range.S:44:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_interrupts.S:57:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from hw_exception_handler.S:44:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_dcache.S:43:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_update_dcache.S:61:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_exceptions.S:39:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_interrupts.S:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_icache.S:42:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_init_icache_range.S:46:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_update_icache.S:60:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_init_dcache_range.S:45:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_icache.S:44:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_cache_ext_range.S:44:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_scrub.S:51:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_dcache.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_dcache_range.S:46:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_cache_ext_range.S:44:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_disable_icache.S:45:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_dcache.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_invalidate_icache_range.S:46:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_dcache.S:45:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_flush_cache_ext.S:41:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from microblaze_enable_exceptions.S:39:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [standalone_libs] エラー 1
+Running Make libs in microblaze_i0/libsrc/uartlite_v3_2/src
+make[1]: ターゲット `libs' はエラーにより再 make できませんでした.
+make: *** [microblaze_i0/libsrc/standalone_v6_5/src/make.libs] エラー 2
+make -C microblaze_i0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xuartlite_l.h:73,
+                 from xuartlite_i.h:69,
+                 from xuartlite.c:85:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xuartlite_g.c:57:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xuartlite_g.c:76:40: error: 'XPAR_XUARTLITE_NUM_INSTANCES' undeclared here (not in a function)
+ XUartLite_Config XUartLite_ConfigTable[XPAR_XUARTLITE_NUM_INSTANCES] =
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_g.c:79:3: error: 'XPAR_UARTLITE_0_DEVICE_ID' undeclared here (not in a function)
+   XPAR_UARTLITE_0_DEVICE_ID, /* Unique ID of device */
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_g.c:80:3: error: 'XPAR_UARTLITE_0_BASEADDR' undeclared here (not in a function)
+   XPAR_UARTLITE_0_BASEADDR, /* Device base address */
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_g.c:81:3: error: 'XPAR_UARTLITE_0_BAUDRATE' undeclared here (not in a function)
+   XPAR_UARTLITE_0_BAUDRATE, /* Fixed baud rate */
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_g.c:82:3: error: 'XPAR_UARTLITE_0_USE_PARITY' undeclared here (not in a function)
+   XPAR_UARTLITE_0_USE_PARITY, /* Fixed parity */
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_g.c:83:3: error: 'XPAR_UARTLITE_0_ODD_PARITY' undeclared here (not in a function)
+   XPAR_UARTLITE_0_ODD_PARITY, /* Fixed parity type */
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_g.c:84:3: error: 'XPAR_UARTLITE_0_DATA_BITS' undeclared here (not in a function)
+   XPAR_UARTLITE_0_DATA_BITS /* Fixed data bits */
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xuartlite_l.h:73,
+                 from xuartlite_i.h:69,
+                 from xuartlite_intr.c:61:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xuartlite_l.h:73,
+                 from xuartlite_l.c:60:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xuartlite_l.h:73,
+                 from xuartlite_i.h:69,
+                 from xuartlite_selftest.c:65:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xuartlite_sinit.c:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xuartlite_l.h:73,
+                 from xuartlite_i.h:69,
+                 from xuartlite_sinit.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xuartlite_sinit.c: In function 'XUartLite_LookupConfig':
+xuartlite_sinit.c:92:24: error: 'XPAR_XUARTLITE_NUM_INSTANCES' undeclared (first use in this function)
+  for (Index=0; Index < XPAR_XUARTLITE_NUM_INSTANCES; Index++) {
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xuartlite_sinit.c:92:24: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xuartlite_l.h:73,
+                 from xuartlite_i.h:69,
+                 from xuartlite_stats.c:60:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [libs] エラー 1
+make: *** [microblaze_i0/libsrc/uartlite_v3_2/src/make.libs] エラー 2
+Running Make libs in microblaze_i0/libsrc/mutex_v4_3/src
+make -C microblaze_i0/libsrc/mutex_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling mutex
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmutex_hw.h:66,
+                 from xmutex.h:131,
+                 from xmutex.c:64:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xmutex.c:65:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmutex_hw.h:66,
+                 from xmutex.h:131,
+                 from xmutex_g.c:54:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xmutex_g.c:55:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xmutex_g.c:70:3: error: 'XPAR_MUTEX_0_DEVICE_ID' undeclared here (not in a function)
+   XPAR_MUTEX_0_DEVICE_ID,
+   ^~~~~~~~~~~~~~~~~~~~~~
+xmutex_g.c:71:3: error: 'XPAR_MUTEX_0_BASEADDR' undeclared here (not in a function)
+   XPAR_MUTEX_0_BASEADDR,
+   ^~~~~~~~~~~~~~~~~~~~~
+xmutex_g.c:72:3: error: 'XPAR_MUTEX_0_NUM_MUTEX' undeclared here (not in a function)
+   XPAR_MUTEX_0_NUM_MUTEX,
+   ^~~~~~~~~~~~~~~~~~~~~~
+xmutex_g.c:73:3: error: 'XPAR_MUTEX_0_ENABLE_USER' undeclared here (not in a function)
+   XPAR_MUTEX_0_ENABLE_USER
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmutex_hw.h:66,
+                 from xmutex.h:131,
+                 from xmutex_selftest.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xmutex_selftest.c:58:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xmutex_hw.h:66,
+                 from xmutex.h:131,
+                 from xmutex_sinit.c:55:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xmutex_sinit.c:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xmutex_sinit.c: In function 'XMutex_LookupConfig':
+xmutex_sinit.c:89:27: error: 'XPAR_XMUTEX_NUM_INSTANCES' undeclared (first use in this function)
+  for (Index = 0U; Index < XPAR_XMUTEX_NUM_INSTANCES; Index++) {
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+xmutex_sinit.c:89:27: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [libs] エラー 1
+make: *** [microblaze_i0/libsrc/mutex_v4_3/src/make.libs] エラー 2
+Running Make libs in microblaze_i0/libsrc/bram_v4_2/src
+make -C microblaze_i0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xbram_hw.h:63,
+                 from xbram.h:139,
+                 from xbram.c:62:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xbram_g.c:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xbram_hw.h:63,
+                 from xbram.h:139,
+                 from xbram_g.c:41:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xbram_hw.h:63,
+                 from xbram.h:139,
+                 from xbram_intr.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xbram_hw.h:63,
+                 from xbram.h:139,
+                 from xbram_selftest.c:72:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_cache.h:78:0,
+                 from xbram_selftest.c:73:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xbram_sinit.c:60:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xbram_hw.h:63,
+                 from xbram.h:139,
+                 from xbram_sinit.c:61:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [libs] エラー 1
+make: *** [microblaze_i0/libsrc/bram_v4_2/src/make.libs] エラー 2
+Running Make libs in microblaze_i0/libsrc/gpio_v4_3/src
+make -C microblaze_i0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xgpio_l.h:87,
+                 from xgpio.h:136,
+                 from xgpio.c:74:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xgpio_l.h:87,
+                 from xgpio.h:136,
+                 from xgpio_extra.c:64:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xgpio_g.c:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xgpio_l.h:87,
+                 from xgpio.h:136,
+                 from xgpio_g.c:41:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xgpio_l.h:87,
+                 from xgpio.h:136,
+                 from xgpio_intr.c:63:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xgpio_l.h:87,
+                 from xgpio.h:136,
+                 from xgpio_selftest.c:59:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xgpio_sinit.c:61:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xgpio_l.h:87,
+                 from xgpio.h:136,
+                 from xgpio_i.h:64,
+                 from xgpio_sinit.c:62:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [libs] エラー 1
+make: *** [microblaze_i0/libsrc/gpio_v4_3/src/make.libs] エラー 2
+Running Make libs in microblaze_i0/libsrc/intc_v3_7/src
+make -C microblaze_i0/libsrc/intc_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling intc
+In file included from xintc.h:234:0,
+                 from xintc.c:83:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:98:0,
+                 from xintc.h:236,
+                 from xintc.c:83:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xintc_l.h:99,
+                 from xintc.h:236,
+                 from xintc.c:83:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_g.c:40:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:234:0,
+                 from xintc_g.c:41:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:98:0,
+                 from xintc.h:236,
+                 from xintc_g.c:41:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xintc_l.h:99,
+                 from xintc.h:236,
+                 from xintc_g.c:41:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_intr.c:100:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:234:0,
+                 from xintc_intr.c:101:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:98:0,
+                 from xintc.h:236,
+                 from xintc_intr.c:101:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xintc_l.h:99,
+                 from xintc.h:236,
+                 from xintc_intr.c:101:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.c:83:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:234:0,
+                 from xintc_l.c:86:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:98:0,
+                 from xintc.h:236,
+                 from xintc_l.c:86:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xintc_l.h:99,
+                 from xintc.h:236,
+                 from xintc_l.c:86:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:234:0,
+                 from xintc_options.c:64:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:98:0,
+                 from xintc.h:236,
+                 from xintc_options.c:64:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xintc_l.h:99,
+                 from xintc.h:236,
+                 from xintc_options.c:64:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc.h:234:0,
+                 from xintc_selftest.c:62:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xintc_l.h:98:0,
+                 from xintc.h:236,
+                 from xintc_selftest.c:62:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xintc_l.h:99,
+                 from xintc.h:236,
+                 from xintc_selftest.c:62:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [libs] エラー 1
+make: *** [microblaze_i0/libsrc/intc_v3_7/src/make.libs] エラー 2
+Running Make libs in microblaze_i0/libsrc/tmrctr_v4_4/src
+make -C microblaze_i0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling tmrctr
+In file included from xtmrctr.c:73:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr.h:179,
+                 from xtmrctr.c:74:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr.h:179,
+                 from xtmrctr_g.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xtmrctr_g.c:58:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr.h:179,
+                 from xtmrctr_intr.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr_l.c:58:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr.h:179,
+                 from xtmrctr_options.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_selftest.c:56:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from xtmrctr_sinit.c:56:0:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr.h:179,
+                 from xtmrctr_sinit.c:57:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+xtmrctr_sinit.c: In function 'XTmrCtr_LookupConfig':
+xtmrctr_sinit.c:93:24: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  for (Index = 0; Index < XPAR_XTMRCTR_NUM_INSTANCES; Index++) {
+                        ^
+In file included from ../../../include/xil_printf.h:12:0,
+                 from ../../../include/xil_io.h:65,
+                 from xtmrctr_l.h:77,
+                 from xtmrctr.h:179,
+                 from xtmrctr_stats.c:55:
+../../../include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+make[1]: *** [libs] エラー 1
+make: *** [microblaze_i0/libsrc/tmrctr_v4_4/src/make.libs] エラー 2
+make: ターゲット `all' はエラーにより再 make できませんでした.
+
+16:34:29 Build Finished (took 1s.264ms)
+

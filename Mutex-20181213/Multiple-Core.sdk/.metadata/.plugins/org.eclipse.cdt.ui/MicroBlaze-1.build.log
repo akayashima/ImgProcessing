@@ -1,0 +1,21 @@
+18:48:35 **** Build of configuration Debug for project MicroBlaze-1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlaze-1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlaze-1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlaze-1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlaze-1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlaze-1.elf  |tee "MicroBlaze-1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8916	    376	   3116	  12408	   3078	MicroBlaze-1.elf
+Finished building: MicroBlaze-1.elf.size
+ 
+
+18:48:35 Build Finished (took 110ms)
+

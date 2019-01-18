@@ -1,0 +1,265 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <xil_printf.h>
+#include "platform.h"
+#include "xtmrctr.h"
+#include "maze.h"
+
+char tem[N][N+1];
+int stateSpace[N][N];
+
+/* 経路コストを保持する配列 */
+int cost[N] = {0};
+/**/
+int cp_res[N];
+int cp_count;
+/* CLOSED リスト （最大要素数=ノード数） */
+int closedList[N];
+int closePtr=-1;
+/* 親節点の記録（CLOSEDリストに対応） */
+int parentList[N];
+/* OPEN リスト （最大要素数=ノード数）*/
+int openList[N];
+int openHeadPtr=0;
+int openTailPtr=-1;
+int openPtr=-1;
+//int openPtr=-1;
+/* 出発節点の番号（0～24）を設定 */
+//int startNode=4;
+/* 目標節点（0～24）を設定 */
+//int goalNode=20;
+/* 探索ステップ数 */
+int step=0;
+
+XTmrCtr TimerCounterInst;
+
+/* 関数のプロトタイプ宣言 */
+void search_breadth(int);
+void search_depth(int);
+//void showStatus( int, int);
+void showResult();
+int  isInClosedList( int );
+int init();
+void maze_init();
+/*-----------------------------------
+   メイン関数
+-----------------------------------*/
+int main()
+{
+  int s;
+  u32 tStart, tEnd;
+
+  double tt=0.0;
+  init_platform();
+  maze_init();//隣接リストを取得
+  init();
+
+        /* CLOSED リストに節点を追加する */
+        closedList[++closePtr] = startNode;
+
+        xil_printf("\r\n1.幅優先探索\r\n");
+        xil_printf("\r\n2.深さ優先探索\r\n");
+        xil_printf(">");
+        scanf("%d",&s);
+        xil_printf("%d\n",s);
+
+        /* 探索関数を呼び出す */
+        switch(s){
+          case 1:
+        	  	  tStart = XTmrCtr_GetValue(&TimerCounterInst, 0);
+                search_breadth( startNode );
+                tEnd = XTmrCtr_GetValue(&TimerCounterInst, 0);
+                break;
+          case 2:
+        	  	  tStart = XTmrCtr_GetValue(&TimerCounterInst, 0);
+                search_depth( startNode );
+                tEnd = XTmrCtr_GetValue(&TimerCounterInst, 0);
+                break;
+          default:
+        	  	  xil_printf("\r\nプログラムを強制終了しました.\r\n");
+                exit(0);
+        }
+        tt = (1.0 * (double)(tEnd - tStart) / 100000000.0);
+
+        int m = tt;//小数点以下を切り捨てて分とする
+        int b = (tt - m) * 1000000000;//nsまで表示
+        if(s==1)
+        xil_printf("\r\n(MicroBlaze)\r\n");
+        else
+        xil_printf("\r\n(MicroBlaze)\r\n");
+        xil_printf("\r\n Time=%4d.%09d[s]\r\n",m,b);
+
+        cleanup_platform();
+        return 0;
+}
+
+int init()
+{
+	int Status;
+
+	Status = XTmrCtr_Initialize(&TimerCounterInst, XPAR_AXI_TIMER_0_DEVICE_ID);
+		if(Status != XST_SUCCESS){
+			xil_printf("\r\n Timer Initialize Error \r\n");
+	        return XST_FAILURE;
+		}
+		XTmrCtr_SetOptions(&TimerCounterInst, 0, XTC_AUTO_RELOAD_OPTION);
+		XTmrCtr_Start(&TimerCounterInst, 0);
+		return 0;
+}
+
+void maze_init()
+{
+  int i,j;
+  FILE *fp;//FILE型構造体
+  fp = fopen("StateSpace.txt","r");
+
+  if (fp == NULL){
+	  xil_printf("\r\n Error: Can't open file \r\n");
+  exit(0);
+  }
+  else{
+    for(i=0; i<N; i++){
+      for(j=0; j<N+1; j++){
+        fscanf(fp,"%c",&tem[i][j]);
+            if(j!=N){//改行は読み込まない
+              stateSpace[i][j]=(int)(tem[i][j]-48);
+              //xil_printf("%d",stateSpace[i][j]);
+            }
+      }
+        //xil_printf("\n");
+    }
+  }
+  fclose(fp);
+}
+
+/*-----------------------------------
+    幅優先探索
+-----------------------------------*/
+void search_breadth( int nodeId )//startNodeが引数
+{
+  int i;
+    /* 子節点の集合を得る */
+    for(i=0; i<=N-1; i++){
+        /* 子節点ならリストに追加 */
+        if(stateSpace[nodeId][i]==1 && isInClosedList(i)==0)
+            /* openListにプッシュする（先にポインタをインクリメントする）*/
+            openList[++openTailPtr]=i;
+    }
+    /* OPENリストが空でないなら展開する */
+    if( openHeadPtr<=openTailPtr ){
+        /* 状態の表示する */
+        //showStatus(nodeId, openList[openHeadPtr]);
+        /* ゴールチェック */
+        if(openList[openHeadPtr]==goalNode){
+            /* 解となる経路を表示する */
+            showResult();
+            /* 解が見つかったので処理を終了させる */
+            return;
+        }
+        /* CLOSEDリストにノードを追加する */
+        closedList[++closePtr]=openList[openHeadPtr] ;
+        /* parentList に親節点の番号を記録する */
+        parentList[closePtr]=nodeId;
+        /* OPENリストから取り出したノードを引数にして再帰的に展開する */
+        search_breadth(openList[openHeadPtr++]);
+    }
+}
+/*-----------------------------------
+    深さ優先探索
+-----------------------------------*/
+void search_depth( int nodeId )//startNodeが引数
+{
+  int i;
+  /* 子節点の集合を得る */
+  for(i=0; i<=N-1; i++){
+      /* 子節点ならリストに追加 */
+      if(stateSpace[nodeId][i]==1 && isInClosedList(i)==0)
+          /* openListにプッシュする（先にポインタをインクリメントする）*/
+          openList[++openPtr]=i;
+  }
+  /* OPEN リストが空でないなら１つを選択して展開する */
+  if( openPtr>=0 ){
+      /* 状態を表示する */
+      //showStatus(nodeId, openList[openPtr]);
+      /* ゴールチェック */
+      if(openList[openPtr]==goalNode){
+          /* 解となる経路を表示する */
+          showResult();
+          /* 解が見つかったので処理を終了させる */
+          return;
+      }
+      /* CLOSED リストにこれから展開する節点追加する */
+      closedList[++closePtr]=openList[openPtr];
+      /* parentList に親節点の番号を記録する */
+      parentList[closePtr]=nodeId;
+      /* OPEN リストからポップした節点番号を引数にして再帰的に展開する */
+      search_depth(openList[openPtr--]);
+  }
+}
+/*-----------------------------------
+   CLOSEDリスト内に引数の節点があるか調べる
+-----------------------------------*/
+int isInClosedList( int nodeId )
+{
+  int i;
+  /* 登録されている個数分だけ調べる */
+  for( i=0; i<=closePtr; i++ )
+    /* 既に展開済みであれば 1 を返す */
+    if( closedList[i]==nodeId ) return 1;
+    /* 見つからない場合は 0 を返す */
+      return 0;
+}
+/*-----------------------------------
+   展開の様子を表示
+-----------------------------------*/
+//void showStatus( int parent, int child)
+//{
+//   int i, j;
+//
+//   /* ステップ数を表示 */
+//   xil_printf("[%04d] ",++step);
+//
+//   /* OPEN リストの表示 */
+//   for(i=0; i<=openPtr; i++) xil_printf("%2d",openList[i]);
+//   for(j=0; j<N-i-1; j++ ) xil_printf(" .");
+//   xil_printf("  ");
+//
+//   /* リンクを辿る様子を表示 */
+//   xil_printf("%d->%d ", parent, child );
+//
+//   /* CLOSED リストの表示 */
+//   for(i=0; i<=closePtr; i++) xil_printf("%2d",closedList[i]);
+//   for(i=0; i<N-closePtr-1; i++ ) xil_printf(" .");
+//   xil_printf(" ");
+//
+//   /* PARENTリストの表示 */
+//   for(i=0; i<=closePtr; i++) xil_printf("%2d",parentList[i]);
+//   for(i=0; i<N-closePtr-1; i++ ) xil_printf(" .");
+//   xil_printf("\n");
+//}
+/*-----------------------------------
+   解である経路を表示する
+   -----------------------------------*/
+void showResult()
+{
+    int i=0, count=0, res[N];
+    int node = closedList[closePtr];
+
+    /* 最後の２節点を記録 */
+    res[count++] = goalNode;
+    res[count++] = node;
+
+    /* 出発節点が見つかるまで繰り返す */
+    while( node != startNode ){
+        /* CLOSED リスト中から節点を探す */
+        i=0; while( closedList[i++] != node );
+        /* 親節点を辿る */
+        node = parentList[--i];
+        /* 結果リストに記録 */
+        res[count++]=node;
+    }
+      /* 経路を出力 */
+    xil_printf("%s%3s", " GOAL","");
+      for(i=--count; i>=1; i--) xil_printf("%d->", res[i]);
+      xil_printf("%d\n", res[0]);
+}

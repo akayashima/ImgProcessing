@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/design_1_wrapper_hw_platform_0" element2="/MicroBlaze-0" element3="/MicroBlaze-0_bsp" element4="/MicroBlaze-1" element5="/MicroBlaze-1_bsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1545731368707"/>
+</session>

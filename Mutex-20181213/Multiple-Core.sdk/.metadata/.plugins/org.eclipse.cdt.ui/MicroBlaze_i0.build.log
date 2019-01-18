@@ -1,0 +1,101 @@
+16:34:29 **** Build of configuration Debug for project MicroBlaze_i0 ****
+make all 
+Building file: ../src/i0_20181101.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i0_20181101.o" -I../../MicroBlaze_i0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i0_20181101.d" -MT"src/i0_20181101.o" -o "src/i0_20181101.o" "../src/i0_20181101.c"
+In file included from ../../MicroBlaze_i0_bsp/microblaze_i0/include/xil_printf.h:12:0,
+                 from ../src/i0_20181101.c:3:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xparameters.h:1:0: error: unterminated #ifndef
+ #ifndef XPARAMETERS_H   /* prevent circular inclusions */
+ 
+../src/i0_20181101.c: In function 'main':
+../src/i0_20181101.c:23:52: error: 'XPAR_MAILBOX_0_IF_1_BASEADDR' undeclared (first use in this function)
+  Status = XMbox_CfgInitialize(&InsPtr, &ConfigPtr, XPAR_MAILBOX_0_IF_1_BASEADDR);//mailbox initialize
+                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:23:52: note: each undeclared identifier is reported only once for each function it appears in
+../src/i0_20181101.c:23:31: warning: passing argument 1 of 'XMbox_CfgInitialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  Status = XMbox_CfgInitialize(&InsPtr, &ConfigPtr, XPAR_MAILBOX_0_IF_1_BASEADDR);//mailbox initialize
+                               ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:218:5: note: expected 'XMbox * {aka struct <anonymous> *}' but argument is of type 'XMbox_Config * {aka struct <anonymous> *}'
+ int XMbox_CfgInitialize(XMbox *InstancePtr, XMbox_Config *ConfigPtr,
+     ^~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:23:40: warning: passing argument 2 of 'XMbox_CfgInitialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  Status = XMbox_CfgInitialize(&InsPtr, &ConfigPtr, XPAR_MAILBOX_0_IF_1_BASEADDR);//mailbox initialize
+                                        ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:218:5: note: expected 'XMbox_Config * {aka struct <anonymous> *}' but argument is of type 'XMbox * {aka struct <anonymous> *}'
+ int XMbox_CfgInitialize(XMbox *InstancePtr, XMbox_Config *ConfigPtr,
+     ^~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:39:22: warning: passing argument 1 of 'XMbox_WriteBlocking' from incompatible pointer type [-Wincompatible-pointer-types]
+  XMbox_WriteBlocking(&InsPtr,&BufferPtr,&RequestedBytes);
+                      ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:226:6: note: expected 'XMbox * {aka struct <anonymous> *}' but argument is of type 'XMbox_Config * {aka struct <anonymous> *}'
+ void XMbox_WriteBlocking(XMbox *InstancePtr, u32 *BufferPtr,
+      ^~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:39:41: warning: passing argument 3 of 'XMbox_WriteBlocking' makes integer from pointer without a cast [-Wint-conversion]
+  XMbox_WriteBlocking(&InsPtr,&BufferPtr,&RequestedBytes);
+                                         ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:226:6: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u32 * {aka long unsigned int *}'
+ void XMbox_WriteBlocking(XMbox *InstancePtr, u32 *BufferPtr,
+      ^~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:40:16: warning: passing argument 1 of 'XMbox_IsEmpty' from incompatible pointer type [-Wincompatible-pointer-types]
+  XMbox_IsEmpty(&InsPtr);
+                ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:228:5: note: expected 'XMbox * {aka struct <anonymous> *}' but argument is of type 'XMbox_Config * {aka struct <anonymous> *}'
+ u32 XMbox_IsEmpty(XMbox *InstancePtr);
+     ^~~~~~~~~~~~~
+../src/i0_20181101.c:41:15: warning: passing argument 1 of 'XMbox_IsFull' from incompatible pointer type [-Wincompatible-pointer-types]
+  XMbox_IsFull(&InsPtr);
+               ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:229:5: note: expected 'XMbox * {aka struct <anonymous> *}' but argument is of type 'XMbox_Config * {aka struct <anonymous> *}'
+ u32 XMbox_IsFull(XMbox *InstancePtr);
+     ^~~~~~~~~~~~
+../src/i0_20181101.c:42:23: warning: passing argument 1 of 'XMbox_Flush' from incompatible pointer type [-Wincompatible-pointer-types]
+  Status = XMbox_Flush(&InsPtr);
+                       ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:230:5: note: expected 'XMbox * {aka struct <anonymous> *}' but argument is of type 'XMbox_Config * {aka struct <anonymous> *}'
+ int XMbox_Flush(XMbox *InstancePtr);
+     ^~~~~~~~~~~
+../src/i0_20181101.c:64:28: warning: passing argument 1 of 'XMbox_SetSendThreshold' from incompatible pointer type [-Wincompatible-pointer-types]
+     XMbox_SetSendThreshold(&InsPtr, &Value);
+                            ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:237:6: note: expected 'XMbox * {aka struct <anonymous> *}' but argument is of type 'XMbox_Config * {aka struct <anonymous> *}'
+ void XMbox_SetSendThreshold(XMbox *InstancePtr, u32 Value);
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:64:37: warning: passing argument 2 of 'XMbox_SetSendThreshold' makes integer from pointer without a cast [-Wint-conversion]
+     XMbox_SetSendThreshold(&InsPtr, &Value);
+                                     ^
+In file included from ../src/i0_20181101.c:5:0:
+../../MicroBlaze_i0_bsp/microblaze_i0/include/xmbox.h:237:6: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u32 * {aka long unsigned int *}'
+ void XMbox_SetSendThreshold(XMbox *InstancePtr, u32 Value);
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/i0_20181101.c:16:70: warning: unused variable 'Mask' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                                                      ^~~~
+../src/i0_20181101.c:16:57: warning: unused variable 'BytesSentPtr' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                                         ^~~~~~~~~~~~
+../src/i0_20181101.c:16:43: warning: unused variable 'BytesRecvdPtr' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+                                           ^~~~~~~~~~~~~
+../src/i0_20181101.c:16:13: warning: unused variable 'tEnd' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+             ^~~~
+../src/i0_20181101.c:16:6: warning: unused variable 'tStart' [-Wunused-variable]
+  u32 tStart,tEnd,BufferPtr,RequestedBytes,BytesRecvdPtr,BytesSentPtr,Mask,Value;
+      ^~~~~~
+../src/i0_20181101.c: In function 'init':
+../src/i0_20181101.c:72:49: error: 'XPAR_AXI_TIMER_0_DEVICE_ID' undeclared (first use in this function)
+  Status = XTmrCtr_Initialize(&TimerCounterInst, XPAR_AXI_TIMER_0_DEVICE_ID);
+                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/i0_20181101.o] エラー 1
+
+16:34:29 Build Finished (took 61ms)
+
