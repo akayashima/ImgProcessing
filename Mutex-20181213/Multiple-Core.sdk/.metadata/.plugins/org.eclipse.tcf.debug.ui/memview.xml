@@ -28,6 +28,12 @@
 <Block Addr="0x80100000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
 <Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
 </Block>
+<Block Addr="0x80200000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
+<Block Addr="0x43400004" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.0" Size="-1">
+<Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
+</Block>
 <Block Addr="0x80000000" Context="JTAG-jsn-Nexys Video-210276689540B-13636093-0.MDM1.1" Size="-1">
 <Rendering ID="org.eclipse.debug.ui.rendering.hexint" Pane="org.eclipse.debug.ui.MemoryView.RenderingViewPane.1"/>
 </Block>

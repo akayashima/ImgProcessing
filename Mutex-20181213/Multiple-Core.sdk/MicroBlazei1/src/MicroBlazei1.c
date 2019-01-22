@@ -24,8 +24,8 @@ unsigned char *inIMG = ((u8 *)XPAR_MIG7SERIES_0_BASEADDR + 0x200000);//処理前
 unsigned char *outIMG = ((u8 *)XPAR_MIG7SERIES_0_BASEADDR + 0x100000);//処理後の画素情報を格納
 
 
-int biWidth; //BMPの幅を保存する
-int biHeight; //BMPの高さを保存する
+int biWidth = 320; //BMPの幅を保存する
+int biHeight = 320; //BMPの高さを保存する
 
 void Show_Time(u32, u32);
 void Mutex_Lock(XMutex *,u8);
@@ -39,7 +39,7 @@ void wr_dram();
 void rd_dram();
 int init();
 void ReadImageFile();
-int Smooth(XMutex *);
+int Smooth(XMutex);
 
 //int init();
 
@@ -49,14 +49,14 @@ int main()
 	XMutex XMutex[2];
 	XMutex_Config *InsPtr[2];
 	u32 xmutex_status,User;
-	int i;
+	int i,endflag=0;
 
-	xil_printf("\r\n MB 1 Start");
+	xil_printf("\r\n MB i1 Start");
 
-	for(i=0;i<4;i++){
-	ReadImageFile();
-	Smooth(&XMutex[1]);
-	}
+	/*for(i=0;i<1;i++){
+		ReadImageFile();
+		Smooth(XMutex[1]);
+	}*/
 
 	//init();
 
@@ -68,7 +68,7 @@ int main()
 			xil_printf("\r\n Mutex-1 Initialize Error ");
 		}
 
-	for(i=0;i<4;i++){
+	for(i=0;i<1;i++){
 
 		while(1){
 		xmutex_status = Mutex_GetUser(&XMutex[1],XPAR_MUTEX_0,&User);//Mutex0のユーザレジを監視.
@@ -82,13 +82,18 @@ int main()
 				xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_0);
 
 				ReadImageFile();//画素情報を読む
-				xmutex_status = Smooth(&XMutex[1]);//平滑処理 : 戻り値core0の状態
+				endflag = Smooth(XMutex[1]);//平滑処理 : 戻り値core0の状態
 
-				if(xmutex_status == 10){//10:core0の処理終了
-					xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_1);//Mutex1をロック
-					xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_1,2);//Mutex1のユーザレジスタを1にする.
-					xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_1);//Mutex1のユーザレジスタをUnlock
-				}
+				/*while(1){
+					xmutex_status = Mutex_GetUser(&XMutex[1],XPAR_MUTEX_0,&User);
+					if(User == 0){}
+				}*/
+					if(endflag == 1){//1:core0の処理終了
+						xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_1);//Mutex1をロック
+						xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_1,2);//Mutex1のユーザレジスタを1にする.
+						xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_1);//Mutex1のユーザレジスタをUnlock
+					}
+			}
 
 			if(User == 2){
 				xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_0);//Mutex1をロック
@@ -97,10 +102,13 @@ int main()
 				break;
 			}
 
-			}
-
 		}
 	}
+
+	xil_printf("\r\n MB i1 End");
+
+	return 0;
+
 }
 
 int init()
@@ -117,12 +125,13 @@ int init()
 	return 0;
 }
 
-int Smooth(XMutex *InstancePtr)
+int Smooth(XMutex InstancePtr)
 {
 	int i,j,k,tmp=0,endflag=0;
-	u32 core0_status=0, User;
 
-	unsigned char *wp = (outIMG + 54);
+	u32 User=0;
+
+	unsigned char *outp = (outIMG + 54);
 
 	//outIMG+=54;//55バイト目から画素情報を格納する.
 	  /*フィルタサイズ3*3*/
@@ -130,9 +139,9 @@ int Smooth(XMutex *InstancePtr)
 			for(j=1;j<biHeight-1;j++){
 			    for(k=0;k<3;k++){//RGB
 
-			    	core0_status = Mutex_GetUser(InstancePtr,XPAR_MUTEX_0,&User);//Mutex0のユーザレジを監視
-			    	if(core0_status == 2){//2:終了
-			    		endflag = 10;
+			    	Mutex_GetUser(&InstancePtr,XPAR_MUTEX_0,&User);//Mutex0のユーザレジを監視
+			    	if(User == 2){//2:終了
+			    		endflag = 1;
 			    	}
 
 			    	tmp = *(inIMG+(biWidth*(i-1)*3)+3*(j-1)+k)//00
@@ -145,27 +154,27 @@ int Smooth(XMutex *InstancePtr)
 						 + *(inIMG+(biWidth*(i+1)*3)+(3*j)+k)
 						 + *(inIMG+(biWidth*(i+1)*3)+3*(j+1)+k);
 
-			    	*(wp +(biWidth*i*3)+(3*j)+k)= tmp/9;//9画素の平均値を注目画素とする
+			    	*(outp +(biWidth*i*3)+(3*j)+k)= tmp/9;//9画素の平均値を注目画素とする
 
 			    	if(i==1){//最初の行のピクセルをコピーする
-			    		*(wp +(biWidth*(i-1)*3)+(3*(j-1))+k) = *(inIMG+(biWidth*(i-1)*3)+(3*(j-1))+k);
+			    		*(outp+(biWidth*(i-1))+(j-1)+k) = *(inIMG+(biWidth*(i-1))+(j-1)+k);
 			    	}
 			    	if(i==biWidth-2){//最後の行のピクセルをコピーする
-			    		*(wp+(biWidth*(i+1)*3)+(3*(j-1))+k) = *(inIMG+(biWidth*(i+1)*3)+(3*(j-1))+k);
+			    		*(outp+(biWidth*(i+1)*3)+(j-1)+k) = *(inIMG+(biWidth*(i+1)*3)+(j-1)+k);
 			    	}
 			    	if(j==1){//左1列のピクセルをコピーする
-			    		*(wp+(biWidth*(j-1)*3)+(3*(i-1))+k) = *(inIMG+(biWidth*(j-1)*3)+(3*(i-1))+k);
+			    		*(outp+(biWidth*(i-1)*3)+(j-1)+k) = *(inIMG+(biWidth*(i-1)*3)+(j-1)+k);
 			    	}
 			    	if(j==biHeight-2){//右1列のピクセルをコピーする
-			    		*(wp+(biWidth*(j+1)*3)+(3*(i-1))+k) = *(inIMG+(biWidth*(j+1)*3)+(3*(i-1))+k);
+			    		*(outp+((biWidth*i*3)-1)+(i-1)+k) = *(inIMG+((biWidth*i*3)-1)+(i-1)+k);
 			    	}
 
 			    	/*縦横9ピクセル分の処理が完了したら*/
-			    	if(i==3 && j==3){
-			    		Mutex_IsLocked(InstancePtr,XPAR_MUTEX_1);//Mutex1をロック
-			    		Mutex_SetUser(InstancePtr,XPAR_MUTEX_1,1);//Mutex1のユーザレジスタを1にする.
+			    	if(i==3 && j==3 && k==2){
+			    		Mutex_IsLocked(&InstancePtr,XPAR_MUTEX_1);//Mutex1をロック
+			    		Mutex_SetUser(&InstancePtr,XPAR_MUTEX_1,1);//Mutex1のユーザレジスタを1にする.
 						wr_dram();
-			    		Mutex_Unlock(InstancePtr,XPAR_MUTEX_1);//Mutex0のユーザレジスタをUnlock
+			    		Mutex_Unlock(&InstancePtr,XPAR_MUTEX_1);//Mutex0のユーザレジスタをUnlock
 			    	}
 
 				}
@@ -181,7 +190,7 @@ void ReadImageFile()
 {
   int i,j,k;
 
-  dramPtr+=54;
+  unsigned char *dramp = (dramPtr + 54);
 
   /*原画像の画素情報を読み込んで3次元配列に保存*/
 	  for(i = 0; i < biHeight; i++){ //0から幅まで
@@ -189,14 +198,14 @@ void ReadImageFile()
 	      for(k = 0; k < 3; k++){ //RGBのそれぞれ
 	         //inIMG[i][j][k] = *dramPtr;//画素の情報を読み込んで保存する
 	    	  //*(inIMG+(biWidth*(i+k) + j)) = *dramPtr;//画素の情報を読み込んで保存する
-	    	  *inIMG = *dramPtr;
+	    	  *inIMG = *dramp;
 	    	  inIMG++;
-	         dramPtr++;
+	         dramp++;
 	      }
 	    }
 	  }
   inIMG = inIMG - (biWidth*biHeight*3);//アドレスのポインタを先頭に戻す
-  dramPtr = dramPtr - (biWidth*biHeight*3) - 54;//アドレスのポインタを先頭に戻す
+  //dramPtr = dramPtr - (biWidth*biHeight*3) - 54;//アドレスのポインタを先頭に戻す
 }
 
 void Show_Time(u32 tEnd, u32 tStart)
@@ -335,7 +344,6 @@ int Mutex_GetUser(XMutex *InstancePtr, u8 MutexNumber, u32 *User)
 	*User = XMutex_ReadReg(InstancePtr->Config.BaseAddress, MutexNumber,
 				XMU_USER_REG_OFFSET);
 
-	//xil_printf("\r\n %d ",(*User)*10);
 
 	return XST_SUCCESS;
 }

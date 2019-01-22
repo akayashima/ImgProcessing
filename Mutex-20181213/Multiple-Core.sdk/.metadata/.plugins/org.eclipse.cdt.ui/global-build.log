@@ -14074,3 +14074,2248 @@ mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
   11288	    428	   3212	  14928	   3a50	MicroBlazei0.elf
 Finished building: MicroBlazei0.elf.size
  
+11:52:41 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:140:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:140:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11256	    428	   3212	  14896	   3a30	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+11:55:58 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+11:55:58 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:41:45 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:140:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:140:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11292	    428	   3216	  14936	   3a58	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+13:41:46 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:47:34 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:140:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:140:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11324	    428	   3216	  14968	   3a78	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+13:47:34 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:48:32 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:140:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:140:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11292	    428	   3216	  14936	   3a58	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+13:48:44 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11304	    428	   3212	  14944	   3a60	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+13:48:49 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:48:49 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:53:17 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11336	    428	   3212	  14976	   3a80	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+13:53:22 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:53:23 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:55:15 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10752	    428	   3212	  14392	   3838	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+13:55:20 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+13:55:20 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:07:03 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:165:11: error: 'wp' undeclared (first use in this function)
+         *(wp +(biWidth*i*3)+(3*j)+k)= tmp/9;//9画素の平均値を注目画素とする
+           ^~
+../src/MicroBlazei0.c:165:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/MicroBlazei0.c:143:17: warning: unused variable 'outp' [-Wunused-variable]
+  unsigned char *outp = (outIMG + 54);
+                 ^~~~
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+make: *** [src/MicroBlazei0.o] エラー 1
+14:07:49 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11192	    428	   3212	  14832	   39f0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+14:08:04 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:08:04 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:14:06 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:14:06 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:15:07 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:15:07 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:17:52 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:17:53 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:18:59 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:19:00 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:22:41 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:22:41 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:24:13 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11188	    428	   3216	  14832	   39f0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+14:24:16 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:24:16 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:25:19 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:25:19 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:27:08 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:27:08 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+14:36:08 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'ReadImageFile':
+../src/MicroBlazei1.c:184:18: warning: unused variable 'inimg' [-Wunused-variable]
+   unsigned char *inimg = inIMG;
+                  ^~~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12344	    388	   3164	  15896	   3e18	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+14:37:11 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'ReadImageFile':
+../src/MicroBlazei1.c:184:18: warning: unused variable 'dramp' [-Wunused-variable]
+   unsigned char *dramp = (dramPtr + 54);
+                  ^~~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12356	    388	   3168	  15912	   3e28	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+14:37:33 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12336	    388	   3164	  15888	   3e10	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:56:46 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:141:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:141:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11188	    428	   3216	  14832	   39f0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:56:47 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12164	    388	   3168	  15720	   3d68	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:57:35 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:57:36 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:00:37 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:140:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:140:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11176	    428	   3212	  14816	   39e0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:07:02 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:07:02 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:10:10 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:10:11 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'Smooth':
+../src/MicroBlazei1.c:123:22: warning: unused variable 'User' [-Wunused-variable]
+  u32 core0_status=0, User;
+                      ^~~~
+../src/MicroBlazei1.c:123:6: warning: unused variable 'core0_status' [-Wunused-variable]
+  u32 core0_status=0, User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11772	    388	   3168	  15328	   3be0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+16:29:21 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:143:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:143:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11224	    428	   3212	  14864	   3a10	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:33:08 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:64:2: warning: implicit declaration of function 'OnlyOnce' [-Wimplicit-function-declaration]
+  OnlyOnce();
+  ^~~~~~~~
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:143:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:143:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/MicroBlazei0.o: In function `main':
+/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/../src/MicroBlazei0.c:493: undefined reference to `OnlyOnce'
+collect2: error: ld returned 1 exit status
+make: *** [MicroBlazei0.elf] エラー 1
+16:33:42 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:143:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:143:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11408	    432	   3208	  15048	   3ac8	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:34:38 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:144:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:144:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	    432	   3212	  15072	   3ae0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:35:24 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:35:24 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:39:36 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:39:36 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:40:31 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'Smooth':
+../src/MicroBlazei1.c:123:22: warning: unused variable 'User' [-Wunused-variable]
+  u32 core0_status=0, User;
+                      ^~~~
+../src/MicroBlazei1.c:123:6: warning: unused variable 'core0_status' [-Wunused-variable]
+  u32 core0_status=0, User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11764	    388	   3168	  15320	   3bd8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+16:40:38 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:144:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:144:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11420	    432	   3212	  15064	   3ad8	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:40:38 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:48:35 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:144:21: warning: unused variable 'User' [-Wunused-variable]
+  u32 core1_status=0,User;
+                     ^~~~
+../src/MicroBlazei0.c:144:6: warning: unused variable 'core1_status' [-Wunused-variable]
+  u32 core1_status=0,User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    432	   3212	  15112	   3b08	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:48:42 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:48:42 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:49:17 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:49:17 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:54:23 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11724	    432	   3212	  15368	   3c08	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:54:25 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12012	    388	   3168	  15568	   3cd0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+16:58:38 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11620	    432	   3212	  15264	   3ba0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:59:22 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11948	    388	   3168	  15504	   3c90	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+16:59:38 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:59:38 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:02:20 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:02:21 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:04:50 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:04:50 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:05:41 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:05:41 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:09:54 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:09:55 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:12:47 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11940	    388	   3168	  15496	   3c88	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:12:52 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11620	    432	   3212	  15264	   3ba0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:13:02 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:13:03 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:13:25 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:13:25 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:21:07 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11652	    432	   3212	  15296	   3bc0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:21:34 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11972	    388	   3168	  15528	   3ca8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:22:14 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11976	    388	   3164	  15528	   3ca8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:22:26 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11656	    432	   3208	  15296	   3bc0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:58:13 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11656	    432	   3208	  15296	   3bc0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:58:13 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:58:54 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:58:54 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:59:42 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:59:42 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:04:21 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:04:21 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:09:38 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:09:38 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:12:57 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11988	    388	   3168	  15544	   3cb8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+18:13:00 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11668	    432	   3212	  15312	   3bd0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+18:13:03 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:13:04 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:13:23 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:13:23 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:14:19 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11988	    388	   3168	  15544	   3cb8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+18:14:22 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11668	    432	   3212	  15312	   3bd0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+18:14:24 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:14:25 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:16:08 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:16:08 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:21:58 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:21:58 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:21:10 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:21:11 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11988	    388	   3168	  15544	   3cb8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+19:36:14 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12048	    388	   3164	  15600	   3cf0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+19:36:17 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:85:34: error: 'Mutex' undeclared (first use in this function)
+   xmutex_status = Mutex_Trylock(&Mutex[0],XPAR_MUTEX_0);
+                                  ^~~~~
+../src/MicroBlazei0.c:85:34: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/MicroBlazei0.o] エラー 1
+19:37:19 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:85:35: error: 'Mutex' undeclared (first use in this function)
+   xmutex_status = Mutex_Trylock((&Mutex[0],XPAR_MUTEX_0);
+                                   ^~~~~
+../src/MicroBlazei0.c:85:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/MicroBlazei0.c:85:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   xmutex_status = Mutex_Trylock((&Mutex[0],XPAR_MUTEX_0);
+                                           ^
+../src/MicroBlazei0.c:85:57: error: expected ')' before ';' token
+   xmutex_status = Mutex_Trylock((&Mutex[0],XPAR_MUTEX_0);
+                                                         ^
+../src/MicroBlazei0.c:85:33: warning: passing argument 1 of 'Mutex_Trylock' makes pointer from integer without a cast [-Wint-conversion]
+   xmutex_status = Mutex_Trylock((&Mutex[0],XPAR_MUTEX_0);
+                                 ^
+../src/MicroBlazei0.c:36:5: note: expected 'XMutex * {aka struct <anonymous> *}' but argument is of type 'int'
+ int Mutex_Trylock(XMutex *,u8);
+     ^~~~~~~~~~~~~
+../src/MicroBlazei0.c:85:19: error: too few arguments to function 'Mutex_Trylock'
+   xmutex_status = Mutex_Trylock((&Mutex[0],XPAR_MUTEX_0);
+                   ^~~~~~~~~~~~~
+../src/MicroBlazei0.c:36:5: note: declared here
+ int Mutex_Trylock(XMutex *,u8);
+     ^~~~~~~~~~~~~
+../src/MicroBlazei0.c:88:2: error: expected ';' before '}' token
+  }
+  ^
+make: *** [src/MicroBlazei0.o] エラー 1
+19:37:25 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:85:34: error: 'Mutex' undeclared (first use in this function)
+   xmutex_status = Mutex_Trylock(&Mutex[0],XPAR_MUTEX_0);
+                                  ^~~~~
+../src/MicroBlazei0.c:85:34: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/MicroBlazei0.o] エラー 1
+19:37:49 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7972	    416	   3212	  11600	   2d50	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+19:37:53 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:37:53 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:38:34 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:38:34 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:39:27 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:39:27 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:40:42 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:40:42 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:43:17 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11988	    388	   3168	  15544	   3cb8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:03:40 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11668	    432	   3212	  15312	   3bd0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:03:40 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:11:04 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:88:28: error: incompatible type for argument 1 of 'Smooth'
+     xmutex_status = Smooth(&XMutex[0]);
+                            ^
+../src/MicroBlazei0.c:48:5: note: expected 'XMutex {aka struct <anonymous>}' but argument is of type 'XMutex * {aka struct <anonymous> *}'
+ int Smooth(XMutex);
+     ^~~~~~
+../src/MicroBlazei0.c:107:28: error: incompatible type for argument 1 of 'Smooth'
+     xmutex_status = Smooth(&XMutex[1]);//戻り値はcore0の状態
+                            ^
+../src/MicroBlazei0.c:48:5: note: expected 'XMutex {aka struct <anonymous>}' but argument is of type 'XMutex * {aka struct <anonymous> *}'
+ int Smooth(XMutex);
+     ^~~~~~
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:185:25: error: incompatible type for argument 1 of 'Mutex_IsLocked'
+          Mutex_IsLocked(InstancePtr,XPAR_MUTEX_0);//Mutex0をロック
+                         ^~~~~~~~~~~
+../src/MicroBlazei0.c:38:5: note: expected 'XMutex * {aka struct <anonymous> *}' but argument is of type 'XMutex {aka struct <anonymous>}'
+ int Mutex_IsLocked(XMutex *,u8);
+     ^~~~~~~~~~~~~~
+../src/MicroBlazei0.c:186:24: error: incompatible type for argument 1 of 'Mutex_SetUser'
+          Mutex_SetUser(InstancePtr,XPAR_MUTEX_0,1);//Mutex0のユーザレジスタを1にする.
+                        ^~~~~~~~~~~
+../src/MicroBlazei0.c:40:5: note: expected 'XMutex * {aka struct <anonymous> *}' but argument is of type 'XMutex {aka struct <anonymous>}'
+ int Mutex_SetUser(XMutex *,u8,u32);
+     ^~~~~~~~~~~~~
+../src/MicroBlazei0.c:188:23: error: incompatible type for argument 1 of 'Mutex_Unlock'
+          Mutex_Unlock(InstancePtr,XPAR_MUTEX_0);//Mutex0のユーザレジスタをUnlock
+                       ^~~~~~~~~~~
+../src/MicroBlazei0.c:37:5: note: expected 'XMutex * {aka struct <anonymous> *}' but argument is of type 'XMutex {aka struct <anonymous>}'
+ int Mutex_Unlock(XMutex *,u8);
+     ^~~~~~~~~~~~
+make: *** [src/MicroBlazei0.o] エラー 1
+15:11:21 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:88:28: error: incompatible type for argument 1 of 'Smooth'
+     xmutex_status = Smooth(&XMutex[0]);
+                            ^
+../src/MicroBlazei0.c:48:5: note: expected 'XMutex {aka struct <anonymous>}' but argument is of type 'XMutex * {aka struct <anonymous> *}'
+ int Smooth(XMutex);
+     ^~~~~~
+../src/MicroBlazei0.c:107:28: error: incompatible type for argument 1 of 'Smooth'
+     xmutex_status = Smooth(&XMutex[1]);//戻り値はcore0の状態
+                            ^
+../src/MicroBlazei0.c:48:5: note: expected 'XMutex {aka struct <anonymous>}' but argument is of type 'XMutex * {aka struct <anonymous> *}'
+ int Smooth(XMutex);
+     ^~~~~~
+make: *** [src/MicroBlazei0.o] エラー 1
+15:11:54 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'main':
+../src/MicroBlazei1.c:80:28: error: incompatible type for argument 1 of 'Smooth'
+     xmutex_status = Smooth(&XMutex[1]);//平滑処理 : 戻り値core0の状態
+                            ^
+../src/MicroBlazei1.c:42:5: note: expected 'XMutex {aka struct <anonymous>}' but argument is of type 'XMutex * {aka struct <anonymous> *}'
+ int Smooth(XMutex);
+     ^~~~~~
+make: *** [src/MicroBlazei1.o] エラー 1
+15:12:14 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11720	    432	   3208	  15360	   3c00	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:12:25 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'main':
+../src/MicroBlazei1.c:69:33: error: incompatible type for argument 1 of 'Mutex_GetUser'
+   xmutex_status = Mutex_GetUser(XMutex[1],XPAR_MUTEX_0,&User);//Mutex0のユーザレジを監視.
+                                 ^~~~~~
+../src/MicroBlazei1.c:36:5: note: expected 'XMutex * {aka struct <anonymous> *}' but argument is of type 'XMutex {aka struct <anonymous>}'
+ int Mutex_GetUser(XMutex *, u8, u32 *);
+     ^~~~~~~~~~~~~
+make: *** [src/MicroBlazei1.o] エラー 1
+15:12:36 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12028	    388	   3168	  15584	   3ce0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:12:49 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:12:49 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:15:23 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12032	    388	   3164	  15584	   3ce0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:15:37 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11724	    432	   3212	  15368	   3c08	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:15:39 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:15:39 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:16:39 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12028	    388	   3168	  15584	   3ce0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:16:48 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11720	    432	   3208	  15360	   3c00	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:17:24 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11720	    432	   3208	  15360	   3c00	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:17:46 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:17:46 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:31:56 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'Smooth':
+../src/MicroBlazei1.c:123:6: warning: variable 'core0_status' set but not used [-Wunused-but-set-variable]
+  u32 core0_status=0, User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12028	    388	   3168	  15584	   3ce0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:32:16 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'Smooth':
+../src/MicroBlazei1.c:123:6: warning: unused variable 'core0_status' [-Wunused-variable]
+  u32 core0_status=0, User;
+      ^~~~~~~~~~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12024	    388	   3164	  15576	   3cd8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:32:22 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    388	   3168	  15576	   3cd8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:32:25 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12024	    388	   3164	  15576	   3cd8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+15:32:47 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11712	    432	   3208	  15352	   3bf8	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+15:33:40 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:33:40 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:34:33 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:34:34 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:36:08 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:36:08 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:40:38 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:40:38 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:43:51 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:43:51 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:48:54 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+15:48:54 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+16:04:29 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11712	    432	   3208	  15352	   3bf8	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+16:04:30 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:15:50 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12024	    396	   3116	  15536	   3cb0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:19:39 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11816	    432	   3208	  15456	   3c60	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:19:39 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12096	    396	   3116	  15608	   3cf8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:21:10 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11816	    432	   3208	  15456	   3c60	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:21:12 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:21:12 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:21:37 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11808	    432	   3208	  15448	   3c58	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:21:42 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:21:43 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:23:44 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:23:45 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:25:12 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11816	    432	   3208	  15456	   3c60	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:25:15 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:25:15 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:26:38 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:149:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User;
+      ^~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11536	    432	   3208	  15176	   3b48	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:26:55 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'Smooth':
+../src/MicroBlazei1.c:130:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User=0;
+      ^~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11824	    396	   3116	  15336	   3be8	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:26:58 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:26:58 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:30:32 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:30:32 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:32:45 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'main':
+../src/MicroBlazei0.c:65:2: warning: implicit declaration of function 'smooth' [-Wimplicit-function-declaration]
+  smooth(XMutex[0]);
+  ^~~~~~
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:150:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User;
+      ^~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/MicroBlazei0.o: In function `main':
+/home/akayashima/H30_Xilinx/ImgProcessing/Mutex-20181213/Multiple-Core.sdk/MicroBlazei0/Debug/../src/MicroBlazei0.c:486: undefined reference to `smooth'
+collect2: error: ld returned 1 exit status
+make: *** [MicroBlazei0.elf] エラー 1
+17:32:55 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:150:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User;
+      ^~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11560	    432	   3208	  15200	   3b60	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:33:16 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:151:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User;
+      ^~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11572	    432	   3212	  15216	   3b70	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:33:19 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:33:19 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:37:00 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:37:01 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:42:29 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:42:30 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:46:03 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+../src/MicroBlazei0.c: In function 'Smooth':
+../src/MicroBlazei0.c:151:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User;
+      ^~~~
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11620	    432	   3212	  15264	   3ba0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:46:06 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:46:06 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:49:32 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+../src/MicroBlazei1.c: In function 'Smooth':
+../src/MicroBlazei1.c:130:6: warning: unused variable 'User' [-Wunused-variable]
+  u32 User=0;
+      ^~~~
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11916	    396	   3120	  15432	   3c48	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:49:37 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:49:37 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:52:42 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12116	    396	   3120	  15632	   3d10	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+17:52:47 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11224	    432	   3208	  14864	   3a10	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:53:17 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:53:17 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:53:36 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:53:37 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:55:12 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11216	    432	   3208	  14856	   3a08	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+17:55:25 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:55:25 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:56:25 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+17:56:25 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:00:41 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11220	    432	   3212	  14864	   3a10	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+18:01:01 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:01:02 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:01:22 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:01:23 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:02:02 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:02:02 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+18:31:45 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    396	   3120	  15536	   3cb0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+18:32:01 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11224	    432	   3208	  14864	   3a10	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+18:32:01 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:16:56 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11124	    432	   3212	  14768	   39b0	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+19:16:56 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12020	    396	   3120	  15536	   3cb0	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+19:18:57 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:18:57 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:21:17 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:21:17 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:22:37 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    432	   3212	  15304	   3bc8	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
+19:22:40 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:22:41 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:28:38 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:28:39 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:45:31 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:45:32 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:46:09 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:46:10 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:48:01 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:48:02 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:50:22 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
+make all 
+make: `all' に対して行うべき事はありません.
+19:50:22 **** Incremental Build of configuration Debug for project MicroBlazei1 ****
+make all 
+make: `all' に対して行うべき事はありません.
+20:12:22 **** Auto Build of configuration Debug for project MicroBlazei1 ****
+make all 
+Building file: ../src/MicroBlazei1.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei1.o" -I../../MicroBlazei1_bsp/microblaze_i1/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei1.d" -MT"src/MicroBlazei1.o" -o "src/MicroBlazei1.o" "../src/MicroBlazei1.c"
+Finished building: ../src/MicroBlazei1.c
+ 
+Building target: MicroBlazei1.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei1_bsp/microblaze_i1/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei1.elf"  ./src/MicroBlazei1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei1.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei1.elf  |tee "MicroBlazei1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12120	    396	   3116	  15632	   3d10	MicroBlazei1.elf
+Finished building: MicroBlazei1.elf.size
+ 
+20:12:23 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+make all 
+Building file: ../src/MicroBlazei0.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MicroBlazei0.o" -I../../MicroBlazei0_bsp/microblaze_i0/include -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/MicroBlazei0.d" -MT"src/MicroBlazei0.o" -o "src/MicroBlazei0.o" "../src/MicroBlazei0.c"
+Finished building: ../src/MicroBlazei0.c
+ 
+Building target: MicroBlazei0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MicroBlazei0_bsp/microblaze_i0/lib -mlittle-endian -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "MicroBlazei0.elf"  ./src/MicroBlazei0.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MicroBlazei0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    432	   3212	  15304	   3bc8	MicroBlazei0.elf
+Finished building: MicroBlazei0.elf.size
+ 
