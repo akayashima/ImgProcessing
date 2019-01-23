@@ -39,7 +39,7 @@ void wr_dram();
 void rd_dram();
 int init();
 void ReadImageFile();
-int Smooth(XMutex);
+void Smooth(XMutex);
 
 //int init();
 
@@ -49,7 +49,7 @@ int main()
 	XMutex XMutex[2];
 	XMutex_Config *InsPtr[2];
 	u32 xmutex_status,User;
-	int i,endflag=0;
+	int i;
 
 	xil_printf("\r\n MB i1 Start");
 
@@ -82,26 +82,16 @@ int main()
 				xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_0);
 
 				ReadImageFile();//画素情報を読む
-				endflag = Smooth(XMutex[1]);//平滑処理 : 戻り値core0の状態
+				Smooth(XMutex[1]);//平滑処理 : 戻り値core0の状態
 
-				/*while(1){
-					xmutex_status = Mutex_GetUser(&XMutex[1],XPAR_MUTEX_0,&User);
-					if(User == 0){}
-				}*/
-					if(endflag == 1){//1:core0の処理終了
-						xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_1);//Mutex1をロック
-						xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_1,2);//Mutex1のユーザレジスタを1にする.
-						xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_1);//Mutex1のユーザレジスタをUnlock
-					}
-			}
-
-			if(User == 2){
-				xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_0);//Mutex1をロック
-				xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_0,0);//Mutex1のユーザレジスタを2にして処理終了を知らせる.
-				xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_0);//Mutex1のユーザレジスタをUnlock
+				/*処理が完了したことをcore0に伝える*/
+				/*最後のコアのみ記述する(以下3行)*/
+				/*xmutex_status = Mutex_IsLocked(&XMutex[1],XPAR_MUTEX_1);//Mutex1をロック
+				xmutex_status = Mutex_SetUser(&XMutex[1],XPAR_MUTEX_1,2);//Mutex1のユーザレジスタを1にする.
+				xmutex_status = Mutex_Unlock(&XMutex[1],XPAR_MUTEX_1);//Mutex1のユーザレジスタをUnlock*/
 				break;
-			}
 
+			}
 		}
 	}
 
@@ -125,9 +115,9 @@ int init()
 	return 0;
 }
 
-int Smooth(XMutex InstancePtr)
+void Smooth(XMutex InstancePtr)
 {
-	int i,j,k,tmp=0,endflag=0;
+	int i,j,k,tmp=0;
 
 	u32 User=0;
 
@@ -140,8 +130,16 @@ int Smooth(XMutex InstancePtr)
 			    for(k=0;k<3;k++){//RGB
 
 			    	Mutex_GetUser(&InstancePtr,XPAR_MUTEX_0,&User);//Mutex0のユーザレジを監視
-			    	if(User == 2){//2:終了
-			    		endflag = 1;
+			    	if(User == 2){//2ならcore0の処理が完了したことを検知
+
+			    		/*Mutex0のユーザレジスタを0に書き換える*/
+			    		Mutex_IsLocked(&InstancePtr,XPAR_MUTEX_0);
+			    		Mutex_SetUser(&InstancePtr,XPAR_MUTEX_0,0);
+			    		Mutex_Unlock(&InstancePtr,XPAR_MUTEX_0);
+
+			    		Mutex_IsLocked(&InstancePtr,XPAR_MUTEX_1);
+			    		Mutex_SetUser(&InstancePtr,XPAR_MUTEX_1,1);
+			    		Mutex_Unlock(&InstancePtr,XPAR_MUTEX_1);
 			    	}
 
 			    	tmp = *(inIMG+(biWidth*(i-1)*3)+3*(j-1)+k)//00
@@ -180,8 +178,6 @@ int Smooth(XMutex InstancePtr)
 				}
 			}
 	  }
-
-	  return endflag;
 	  //outIMG = outIMG-((biWidth-2)*(biHeight-2)*3)-54;//先頭アドレスに戻す
 	  //dramPtr = (char *)outIMG;
 }

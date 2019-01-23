@@ -1,4 +1,4 @@
-20:12:23 **** Auto Build of configuration Debug for project MicroBlazei0 ****
+18:06:50 **** Incremental Build of configuration Debug for project MicroBlazei0 ****
 make all 
 Building file: ../src/MicroBlazei0.c
 Invoking: MicroBlaze gcc compiler
@@ -13,9 +13,9 @@ Finished building target: MicroBlazei0.elf
 Invoking: MicroBlaze Print Size
 mb-size MicroBlazei0.elf  |tee "MicroBlazei0.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  11660	    432	   3212	  15304	   3bc8	MicroBlazei0.elf
+  11764	    432	   3212	  15408	   3c30	MicroBlazei0.elf
 Finished building: MicroBlazei0.elf.size
  
 
-20:12:23 Build Finished (took 111ms)
+18:06:50 Build Finished (took 110ms)
 
